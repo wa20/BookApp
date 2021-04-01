@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+  }
+  
+  ol,
+  ul {
+    list-style: none;
+  }
+
+
+ 
+
+  /* laptop view */
+  @media (min-width: 480px) {
+    body{
+        background-image: url(./Assets/henry-be-lc7xcWebECc-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        z-index: 0;
+       }
+  }
+
+  
+  /* mobile view */
+  @media (max-width: 479px) {
+    body{
+        background-image: url(./Assets/henry-be-lc7xcWebECc-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        z-index: 0;
+       }
+  }

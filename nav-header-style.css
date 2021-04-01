@@ -1,0 +1,39 @@
+
+/* laptop view */
+@media (min-width: 950px) {
+    .fixed-navbar  {
+        display: flex;
+        width: 100vw;
+        min-height: 10vh;
+        height: auto;
+        background: white;
+        position: fixed;
+        top: 0;
+    }
+  }
+  
+  /* small-laptop / tablet view */
+  @media (max-width: 949px) and (min-width: 480px) {
+    .fixed-navbar {
+        display: flex;
+        width: 100vw;
+        min-height: 10vh;
+        height: auto;
+        background: white;
+        position: fixed;
+        top: 0;
+    }
+  }
+  
+  /* mobile view */
+  @media (max-width: 479px) {
+    .fixed-navbar {
+        display: flex;
+        width: 100vw;
+        min-height: 10vh;
+        height: auto;
+        background: white;
+        position: fixed;
+        top: 0;
+    }
+  }
