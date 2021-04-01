@@ -1,40 +1,129 @@
+/* laptop view */
+@media (min-width: 950px) {
+  .fixed-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 100vw;
+    min-height: 10vh;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322);
+    height: auto;
+    background: rgb(253, 207, 0);
+    position: fixed;
+    top: 0;
+  }
+}
+
+/* small-laptop / tablet view */
+@media (max-width: 949px) and (min-width: 480px) {
+  .fixed-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    min-height: 10vh;
+    background: rgb(253, 207, 0);
+    position: fixed;
+    top: 0;
+  }
+}
+
+
+/* mobile view */
+@media (max-width: 479px) {
+  .fixed-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background: rgb(253, 207, 0);
+    position: fixed;
+    top: 0;
+  }
+}
+
+/* ==============================================
+- LOGO
+============================================== */
+/* laptop view */
+@media (min-width: 950px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3.5rem;
+    font-size: 3rem;
+  }
+}
+
+/* small-laptop / tablet view */
+@media (max-width: 949px) and (min-width: 480px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    font-size: 2.5rem;
+   
+  }
+}
+
+/* mobile view */
+@media (max-width: 479px) {
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    font-size: 2.5rem;
+   
+  }
+}
+
+/* ==============================================
+- Options menu
+============================================== */
 
 /* laptop view */
 @media (min-width: 950px) {
-    .fixed-navbar  {
-        display: flex;
-        width: 100vw;
-        min-height: 10vh;
-        box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322);
-        height: auto;
-        background: white;
-        position: fixed;
-        top: 0;
-    }
+  .navbar-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 60%; */
+    padding: 3.5rem;
+    font-size: 3rem;
   }
-  
-  /* small-laptop / tablet view */
-  @media (max-width: 949px) and (min-width: 480px) {
-    .fixed-navbar {
-        display: flex;
-        width: 100vw;
-        min-height: 10vh;
-        height: auto;
-        background: white;
-        position: fixed;
-        top: 0;
-    }
+}
+
+/* small-laptop / tablet view / mobile view */
+@media (max-width: 949px) {
+  .navbar-options {
+    visibility: hidden;
   }
-  
-  /* mobile view */
-  @media (max-width: 479px) {
-    .fixed-navbar {
-        display: flex;
-        width: 100vw;
-        min-height: 10vh;
-        height: auto;
-        background: white;
-        position: fixed;
-        top: 0;
-    }
+}
+
+/* ==============================================
+-Burger Bar
+============================================== */
+@media (min-width: 950px) {
+  .burger {
+    visibility: hidden;
   }
+}
+
+@media (max-width: 949px) {
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+  }
+}
+
+.fa-bars {
+  font-size: 4.5rem;
+  color: aliceblue;
+}
