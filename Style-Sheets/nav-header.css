@@ -10,7 +10,7 @@
     min-height: 10vh;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322);
     height: auto;
-    background: rgb(253, 207, 0);
+    background: #2d314270;
     position: fixed;
     top: 0;
     z-index: 5;
@@ -26,7 +26,7 @@
     align-items: center;
     width: 100vw;
     min-height: 10vh;
-    background: rgb(253, 207, 0);
+    background: #2d31425b;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -42,7 +42,7 @@
     align-items: center;
     width: 100vw;
     height: 10vh;
-    background: rgb(253, 207, 0);
+    background: #2D3142;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -98,24 +98,29 @@
 @media (min-width: 950px) {
   .navbar-options {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    width: 60%;
+    width: 65%;
     padding: 3.5rem;
-    font-size: 2.0rem;
+    font-size: 2rem;
     margin: 0;
   }
 }
-@media (min-width: 950px) {
- 
-  li{
-   margin: 0;
- }
 
+@media (min-width: 950px) {
+  li {
+    margin: 0;
+  }
+}
+
+/* below code does not seem to work */
+li::before,
+li::after {
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 950px) {
-  .navbar-options>h3 {
+  .navbar-options > h3 {
     margin: 0;
   }
 }
@@ -148,7 +153,6 @@
   }
 }
 
-
 /* ==============================================
 -Burger Size
 ============================================== */
@@ -156,15 +160,15 @@
 /* small-laptop / tablet view */
 @media (max-width: 949px) and (min-width: 480px) {
   .fa-bars {
-    font-size: 4.0rem;
+    font-size: 4rem;
     color: aliceblue;
-    }
+  }
 }
-
 
 /* mobile view */
 @media (max-width: 479px) {
-.fa-bars {
-  font-size: 3.0rem;
-  color: aliceblue;
+  .fa-bars {
+    font-size: 3rem;
+    color: aliceblue;
+  }
 }
