@@ -49,4 +49,11 @@
   body {
     display: flex;
     flex-direction: column;
+    position: relative;
+    -webkit-transition: transform .7s ease-in-out;
+    -moz-transition: transform .7s ease-in-out;
+    -ms-transition: transform .7s ease-in-out;
+    -o-transition: transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
+    z-index: 2;
   }
