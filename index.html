@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./Style-Sheets/footer.css" />
     <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
     <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />
+    <link rel="stylesheet" href="./Style-Sheets/slideout-navbar.css" />
     <!-- <link rel="stylesheet" href="./" /> -->
     <title>BookApp</title>
   </head>
@@ -28,17 +29,17 @@
     <!-- fixed header bar -->
     <header class="fixed-navbar">
       <div class="logo">BookAPP</div>
-      <ul class="navbar-options">
-        <li>Library</li>
-        <li>Wish List</li>
-        <li>Swap List</li>
-      </ul>
+      <nav class=" navbar-options breadcrumb is-right" aria-label="breadcrumbs">
+        <ul>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Wish List</a></li>
+          <li><a href="#">Swap List</a></li>
+        </ul>
+      </nav>
       <div class="burger"><i class="fas fa-bars"></i></div>
     </header>
 
     <!-- hero overlay of search bar and text -->
-
-  
 
     <section class="hero">
 
@@ -59,14 +60,17 @@
 
     <!-- main container where all books and content will live -->
 
-    <main class="main-body"></main>
+    <main class="main-body">
+
+
+    </main>
 
     <!-- <section class="">
 
     </section> -->
 
     <footer class="page-footer"></footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="./Javascript/app.js"></script>
   </body>
 </html>

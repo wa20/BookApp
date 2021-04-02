@@ -98,21 +98,28 @@
 @media (min-width: 950px) {
   .navbar-options {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    width: 60%;
+    width: 65%;
     padding: 3.5rem;
     font-size: 2.0rem;
     margin: 0;
   }
 }
+
+
 @media (min-width: 950px) {
  
   li{
    margin: 0;
  }
-
 }
+
+/* below code does not seem to work */
+li::before, li::after {
+  color: rgb(255, 255, 255);
+}
+
 
 @media (min-width: 950px) {
   .navbar-options>h3 {
@@ -167,4 +174,5 @@
 .fa-bars {
   font-size: 3.0rem;
   color: aliceblue;
+}
 }

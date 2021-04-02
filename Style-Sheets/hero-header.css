@@ -29,6 +29,18 @@
         width: 40vw;
     }
   }
+
+.button{
+    cursor: pointer;
+    background:rgb(160, 0, 0) ;
+    color: white;
+}
+
+  .button:hover{
+      cursor: pointer;
+     background:rgb(255, 255, 255) ;
+     color:rgb(160, 0, 0)
+  }
   
   /* small-laptop / tablet view / mobile view */
   @media (max-width: 949px) {
