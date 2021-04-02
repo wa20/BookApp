@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
+    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -24,21 +28,33 @@
     <!-- fixed header bar -->
     <header class="fixed-navbar">
       <div class="logo">BookAPP</div>
-      <aside class="navbar-options">
-        <h3>Option A</h3>
-        <h3>Option B</h3>
-        <h3>Obtion C</h3>
-      </aside>
+      <ul class="navbar-options">
+        <li>Library</li>
+        <li>Wish List</li>
+        <li>Swap List</li>
+      </ul>
       <div class="burger"><i class="fas fa-bars"></i></div>
     </header>
 
     <!-- hero overlay of search bar and text -->
 
+  
+
     <section class="hero">
-      <h2 class="tag-line"></h2>
-      <div class="serach-area">
-          <input type="search">
-      </div>
+
+        <div class="column is-8 search-area">
+              <div class="field has-addons">
+                <p class="control">
+                  <input class="is-large is-hovered input" type="text" placeholder="Search Book">
+                </p>
+                <p class="control">
+                  <button class="button is-large">
+                    Search
+                  </button>
+                </p>
+              </div>
+        </div>
+
     </section>
 
     <!-- main container where all books and content will live -->
