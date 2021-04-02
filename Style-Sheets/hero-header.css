@@ -25,6 +25,9 @@
         align-items: center;
         
     }
+    .input{
+        width: 40vw;
+    }
   }
   
   /* small-laptop / tablet view / mobile view */
