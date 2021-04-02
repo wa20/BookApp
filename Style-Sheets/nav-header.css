@@ -137,7 +137,7 @@ li::after {
 /* ==============================================
 -Burger Bar
 ============================================== */
-
+/* 
 @media (min-width: 950px) {
   .burger {
     display: none;
@@ -151,24 +151,24 @@ li::after {
     align-items: center;
     padding: 1.5rem;
   }
-}
+} */
 
 /* ==============================================
 -Burger Size
 ============================================== */
 
 /* small-laptop / tablet view */
-@media (max-width: 949px) and (min-width: 480px) {
+/* @media (max-width: 949px) and (min-width: 480px) {
   .fa-bars {
     font-size: 4rem;
     color: aliceblue;
   }
-}
+} */
 
 /* mobile view */
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
   .fa-bars {
     font-size: 3rem;
     color: aliceblue;
   }
-}
+} */

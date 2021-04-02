@@ -1,21 +1,103 @@
+
+
+  
+  
+
 /* ==============================================
-- 
+- Slide out bar
 ============================================== */
-
-/* laptop view */
-
-@media (min-width: 950px) {
-   
-  }
   
-  /* small-laptop / tablet view */
-  
-  @media (max-width: 949px) and (min-width: 480px) {
+
+/* small-laptop / tablet view */
+/* the slide out background */
+  @media (max-width: 949px) {
+    .slideout-sidebar {
+        height: 100%;
+        width: 70vw;
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        right: 0;
+        background-color: #cfb000;
+        display: none;
+      }
+
+      .nav-right {
+        position: fixed;
+        right: 40px;
+        top: 20px;
+      }
+      
+      .nav-right.visible-xs {
+        z-index: 6;
+      }
+      
+      .hidden-xs {
+        display: none;
+      }
   
   }
   
   /* mobile view */
   
-  @media (max-width: 479px) {
+  /* @media (max-width: 479px) {
    
+  } */
+
+/* ==============================================
+- hamburger slide out feature
+============================================== */
+  
+
+.bar {
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+  }
+  
+
+  .nav-right.visible-xs .active .bar {
+    background-color: #FFF;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
+  }
+
+  /* pulls slider to the left - activated by function */
+  .move-to-left {
+    -webkit-transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -ms-transform: translateX(-400px);
+    -o-transform: translateX(-400px);
+    transform: translateX(-400px);
+  }
+
+
+/* ==============================================
+- hamburger transitions
+============================================== */
+
+
+  .button.active .top {
+    -webkit-transform: translateY(15px) rotateZ(45deg);
+    -moz-transform: translateY(15px) rotateZ(45deg);
+    -ms-transform: translateY(15px) rotateZ(45deg);
+    -o-transform: translateY(15px) rotateZ(45deg);
+    transform: translateY(15px) rotateZ(45deg);
+  }
+  
+  .button.active .bottom {
+    -webkit-transform: translateY(-15px) rotateZ(-45deg);
+    -moz-transform: translateY(-15px) rotateZ(-45deg);
+    -ms-transform: translateY(-15px) rotateZ(-45deg);
+    -o-transform: translateY(-15px) rotateZ(-45deg);
+    transform: translateY(-15px) rotateZ(-45deg);
+  }
+  
+  .button.active .middle {
+    width: 0;
   }

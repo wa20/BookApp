@@ -41,11 +41,10 @@
   }
 
 /* ==============================================
-
+shift boday to the left
 ============================================== */
 
-
-
+@media (max-width: 949px) {
   body {
     display: flex;
     flex-direction: column;
@@ -57,3 +56,4 @@
     transition: transform .7s ease-in-out;
     z-index: 2;
   }
+}
