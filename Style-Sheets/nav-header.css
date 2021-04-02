@@ -1,4 +1,5 @@
 /* laptop view */
+
 @media (min-width: 950px) {
   .fixed-navbar {
     display: flex;
@@ -16,6 +17,7 @@
 }
 
 /* small-laptop / tablet view */
+
 @media (max-width: 949px) and (min-width: 480px) {
   .fixed-navbar {
     display: flex;
@@ -29,8 +31,8 @@
   }
 }
 
-
 /* mobile view */
+
 @media (max-width: 479px) {
   .fixed-navbar {
     display: flex;
@@ -47,7 +49,9 @@
 /* ==============================================
 - LOGO
 ============================================== */
+
 /* laptop view */
+
 @media (min-width: 950px) {
   .logo {
     display: flex;
@@ -59,6 +63,7 @@
 }
 
 /* small-laptop / tablet view */
+
 @media (max-width: 949px) and (min-width: 480px) {
   .logo {
     display: flex;
@@ -66,11 +71,11 @@
     align-items: center;
     padding: 2.5rem;
     font-size: 2.5rem;
-   
   }
 }
 
 /* mobile view */
+
 @media (max-width: 479px) {
   .logo {
     display: flex;
@@ -78,7 +83,6 @@
     align-items: center;
     padding: 1.5rem;
     font-size: 2.5rem;
-   
   }
 }
 
@@ -87,6 +91,7 @@
 ============================================== */
 
 /* laptop view */
+
 @media (min-width: 950px) {
   .navbar-options {
     display: flex;
@@ -98,7 +103,14 @@
   }
 }
 
+@media (min-width: 950px) {
+  .navbar-options>h3 {
+    margin: 0;
+  }
+}
+
 /* small-laptop / tablet view / mobile view */
+
 @media (max-width: 949px) {
   .navbar-options {
     visibility: hidden;
@@ -108,9 +120,11 @@
 /* ==============================================
 -Burger Bar
 ============================================== */
+
 @media (min-width: 950px) {
   .burger {
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
   }
 }
 
