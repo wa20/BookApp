@@ -19,7 +19,8 @@
         background-position: center;
         background-size: cover;
         min-height: 100vh;
-      
+        display: flex;
+        flex-direction: column;
         /* z-index: 0; */
        }
   }
@@ -28,6 +29,8 @@
   /* mobile view */
   @media (max-width: 479px) {
     html{
+      display: flex;
+    flex-direction: column;
         
         background-image: url(./Assets/henry-be-lc7xcWebECc-unsplash.jpg);
         background-size: cover;

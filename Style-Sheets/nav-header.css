@@ -12,6 +12,7 @@
     background: rgb(253, 207, 0);
     position: fixed;
     top: 0;
+    z-index: 2;
   }
 }
 
@@ -26,6 +27,7 @@
     background: rgb(253, 207, 0);
     position: fixed;
     top: 0;
+    z-index: 2;
   }
 }
 
@@ -41,6 +43,7 @@
     background: rgb(253, 207, 0);
     position: fixed;
     top: 0;
+    z-index: 2;
   }
 }
 
@@ -94,14 +97,23 @@
     align-items: center;
     width: 60%;
     padding: 3.5rem;
-    font-size: 3rem;
+    font-size: 2.0rem;
+    margin: 0;
   }
+}
+@media (min-width: 950px) {
+ 
+  li{
+   margin: 0;
+ }
+
 }
 
 /* small-laptop / tablet view / mobile view */
 @media (max-width: 949px) {
   .navbar-options {
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
   }
 }
 
@@ -111,6 +123,7 @@
 @media (min-width: 950px) {
   .burger {
     visibility: hidden;
+    display: none;
   }
 }
 
@@ -119,11 +132,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2em;
+    padding: 1.5rem;
   }
 }
 
+
+/* ==============================================
+-Burger Size
+============================================== */
+
+/* small-laptop / tablet view */
+@media (max-width: 949px) and (min-width: 480px) {
+  .fa-bars {
+    font-size: 4.0rem;
+    color: aliceblue;
+    }
+}
+
+
+/* mobile view */
+@media (max-width: 479px) {
 .fa-bars {
-  font-size: 4.5rem;
+  font-size: 3.0rem;
   color: aliceblue;
+  }
 }
