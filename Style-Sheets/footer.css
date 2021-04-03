@@ -1,9 +1,17 @@
-
-
-
+@media (min-width: 950px) {
 .page-footer{
         background: transparent;
         width: 100vw;
         height: 20vh;
-        /* z-index: 1; */
+       
         }
+}
+
+@media (max-width: 949px) {
+        .page-footer{
+                background: transparent;
+                width: 100vw;
+                height: 20vh;
+             
+                }
+}

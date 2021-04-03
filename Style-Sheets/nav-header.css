@@ -102,22 +102,22 @@
     align-items: center;
     width: 65%;
     padding: 3.5rem;
-    font-size: 2rem;
+    color: white;
     margin: 0;
   }
 }
 
 @media (min-width: 950px) {
-  li {
+  /* li {
     margin: 0;
-  }
+  } */
 }
 
 /* below code does not seem to work */
-li::before,
+/* li::before,
 li::after {
   color: rgb(255, 255, 255);
-}
+} */
 
 @media (min-width: 950px) {
   .navbar-options > h3 {
@@ -133,6 +133,22 @@ li::after {
     display: none;
   }
 }
+
+
+/* ==============================================
+- Header Menu
+============================================== */
+
+.menuItem {
+  font-size: 2rem;
+}
+
+
+
+
+
+
+
 
 /* ==============================================
 -Burger Bar
