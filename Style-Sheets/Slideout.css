@@ -3,14 +3,6 @@
 shift boday to the left 
 ============================================== */
 
-
-@media (min-width: 949px) { 
-  /* .mainBody {
-   display: none;
-  } */
-  
-}
-
 @media (max-width: 949px) { 
 .mainBody {
   z-index: 2;
@@ -18,7 +10,6 @@ shift boday to the left
   /* height: 100%; */
   background-color: transparent;
   /* -webkit-transition: transform .7s ease-in-out; */
-
   transition: transform 1s ease-in-out;
 }
 
@@ -26,25 +17,37 @@ shift boday to the left
 
 
 /* ==============================================
-- Slide out bar  container
+- hidden Slideout sidebar  container
 ============================================== */
 
-@media (min-width: 950px) { 
+@media (max-width: 949px) { 
   .sidebar {
+    /* transition: all 1.0s 0.5s ease-in; */
    display: hidden;
   }
 }
 
+
 @media (max-width: 949px) { 
-.sidebar {
+.side-visible {
   height: 100%;
-  width: 400px;
+  width: 75%;
   position: fixed;
   top: 0;
   z-index: 1;
   right: 0;
   background-color: rgb(239, 131, 84);
+ 
 }
+}
+
+/* ==============================================
+- move body left
+============================================== */
+
+.move-to-left {
+  /* -webkit-transform: translateX(-400px); */
+  transform: translateX(-75%);
 }
 
 
@@ -58,7 +61,7 @@ shift boday to the left
   display: block;
   height: 5px;
   width: 50px;
-  background-color: rgb(239, 129, 82);
+  background-color: rgb(255, 255, 255);
   margin: 10px auto;
 }
 }
@@ -67,10 +70,11 @@ shift boday to the left
 .burgerBtn {
   cursor: pointer;
   display: inline-block;
+  /* position: absolute; */
+  margin-top: 10px;
   width: auto;
   margin: 0 auto;
   /* -webkit-transition: all .7s ease; */
-  
   transition: all 1.0s ease;
 }
 
@@ -131,16 +135,6 @@ shift boday to the left
   width: 0;
 }
 
-/* ==============================================
-- move body left
-============================================== */
-
-.move-to-left {
-  /* -webkit-transform: translateX(-400px); */
- 
-  transform: translateX(-400px);
-}
-
 
 /* ==============================================
 - menu options positioning and settings
@@ -164,30 +158,26 @@ shift boday to the left
 ============================================== */
 
 .sidebar-item {
-  margin: 30px 0;
+  margin: 5rem 0;
   opacity: 0;
   /* -webkit-transform: translateY(-20px); */
- 
   transform: translateY(-20px);
 }
 
 .sidebar-item:first-child {
   /* -webkit-transition: all .7s .2s ease-in-out; */
- 
   transition: all 1.0s .2s ease-in-out;
 }
 
 .sidebar-item:nth-child(2) {
   /* -webkit-transition: all .7s .4s ease-in-out; */
-
   transition: all 1.0s .4s ease-in-out;
 }
 
-.sidebar-item:nth-child(3) {
+/* .sidebar-item:nth-child(3) { */
   /* -webkit-transition: all .7s .6s ease-in-out; */
- 
-  transition: all 1.0s .6s ease-in-out;
-}
+  /* transition: all 1.0s .6s ease-in-out;
+} */
 
 .sidebar-item:last-child {
   /* -webkit-transition: all .7s .8s ease-in-out; */
@@ -248,7 +238,7 @@ shift boday to the left
 }
 
 @media (min-width: 768px) {
-  .nav-right {
+  /* .nav-right {
     position: absolute;
   }
   .hidden-xs {
@@ -256,5 +246,5 @@ shift boday to the left
   }
   .visible-xs {
     display: none;
-  }
+  } */
 }
