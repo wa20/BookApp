@@ -4,26 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
-    />
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- CSS Style sheets below -->
     <link rel="stylesheet" href="./background.css" />
     <link rel="stylesheet" href="./Style-Sheets/body.css" />
     <link rel="stylesheet" href="./Style-Sheets/footer.css" />
-    <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
     <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />    
     <link rel="stylesheet" href="./Style-Sheets/Slideout.css" />
     <link rel="stylesheet" href="./Style-Sheets/carousel.css" />
+    <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
 
     <title>BookApp</title>
 </head>
+<body>
     <nav class="nav-right visible-xs">
         <div class="burgerBtn" id="burgerBtn">
             <div class="bar top"></div>
@@ -36,14 +32,13 @@
 
     <header class="fixed-navbar">
         <div class="logo">BookAPP</div>
-        <nav class="navbar-options breadcrumb is-right" aria-label="breadcrumbs">
-            <ul>
-                <li><a href="#">Library</a></li>
-                <li><a href="#">Wish List</a></li>
-                <li><a href="#">Swap List</a></li>
-            </ul>
-        </nav>
-    
+        <nav class="navbar-options">
+          <ul class="ui secondary  menu">
+                <li class="menuItem"><a class="item" href="#">Library</a></li>
+                <li class="menuItem"><a class="item" href="#">Wish List</a></li>
+                <li class="menuItem"><a class="item" href="#">Swap List</a></li>
+          </ul>
+          </nav>
     
         <div class="nav-right hidden-xs">
           <div class="burgerBtn" id="burgerBtn">
@@ -55,26 +50,56 @@
         <!-- nav-right -->
     
     </header>
-    <section class="hero">
-        <div class="column is-8 search-area">
-          <div class="field has-addons">
-            <p class="control">
-              <input
-                id="search-bar"
-                class="is-large is-hovered input"
-                type="text"
-                placeholder="Search Book"
-              />
-            </p>
-            <p class="control">
-              <button id="search-btn" class="button is-large searchBtn">Search</button>
-            </p>
+    
+    
+    <section class="hero results"> 
+      <div class="search-area">
+        <div class="ui action input ">
+          <input class="huge" type="text" placeholder="Search..." id="search-bar">
+          <div class="ui button searchBtn red huge" id="search-btn">Search</div>
+        </div>
+      </div> 
+    </section>
+
+    <section class="main-body">
+      <h1 id=results-header class="ui header centered grid ">Search Results</h1>
+
+      <div class="ui two column grid">
+
+        <div class="column">
+          <div class="ui fluid card">
+            <div class="content">
+              <a class="header">Result 1</a>
+            </div>
           </div>
         </div>
-      </section>
 
-    </main>
-<body>
+        <div class="column">
+          <div class="ui fluid card">
+            <div class="content">
+              <a class="header">Result 2</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
     
+
+    </main>  
+    
+    
+
+    <!-- external JQUERY sources -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    <!-- linked JS script files -->
+    <script src="./Javascript/burger-bar.js"></script>
+    <script src="./Javascript/carousel.js"></script>
+    <script src="./Javascript/API.js"></script>
 </body>
+
+
 </html>
