@@ -8,7 +8,7 @@
     color: white;
     width: 100vw;
     min-height: 10vh;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322);
+    /* box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322); */
     height: auto;
     background: #2d3142e0;
     position: fixed;
