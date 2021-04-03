@@ -1,48 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css" />
-  <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
-    /> -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./background.css" />
-  <link rel="stylesheet" href="./Style-Sheets/body.css" />
-  <link rel="stylesheet" href="./Style-Sheets/footer.css" />
-  <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
-  <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />
-  <link rel="stylesheet" href="./Style-Sheets/slideout-navbar.css" />
-  <link rel="stylesheet" href="./Style-Sheets/carousel.css" />
-  <!-- <link rel="stylesheet" href="./" /> -->
-  <title>BookApp</title>
-</head>
-
-<body>
-  <!-- fixed header bar -->
-  <header class="fixed-navbar">
-    <div class="logo">BookAPP</div>
-    <nav class=" navbar-options breadcrumb is-right" aria-label="breadcrumbs">
-      <ul>
-        <li><a href="#">Library</a></li>
-        <li><a href="#">Wish List</a></li>
-        <li><a href="#">Swap List</a></li>
-      </ul>
-    </nav>
-    <div class="burger"><i class="fas fa-bars"></i></div>
-  </header>
-
-  <!-- hero overlay of search bar and text -->
-
-  <section class="hero">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap links below -->
   <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
@@ -51,12 +12,16 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- CSS Style sheets below -->
     <link rel="stylesheet" href="./background.css" />
     <link rel="stylesheet" href="./Style-Sheets/body.css" />
     <link rel="stylesheet" href="./Style-Sheets/footer.css" />
     <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
     <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />    
     <link rel="stylesheet" href="./Style-Sheets/Slideout.css" />
+    <link rel="stylesheet" href="./Style-Sheets/carousel.css" />
+    <!-- <link rel="stylesheet" href="./style.css"> -->
   <title>BookApp</title>
 </head>
 
@@ -86,7 +51,8 @@
               <li><a href="#">Swap List</a></li>
           </ul>
       </nav>
-
+  
+  
       <div class="nav-right hidden-xs">
         <div class="burgerBtn" id="burgerBtn">
           <div class="bar top"></div>
@@ -102,7 +68,11 @@
     <div class="column is-8 search-area">
       <div class="field has-addons">
         <p class="control">
-          <input class="is-large is-hovered input" type="text" placeholder="Search Book" />
+          <input
+            class="is-large is-hovered input"
+            type="text"
+            placeholder="Search Book"
+          />
         </p>
         <p class="control">
           <button class="button is-large searchBtn">Search</button>
@@ -111,46 +81,18 @@
     </div>
   </section>
 
-
-  <section class="main-body"></section>
-
-  <!-- <section class="">
-
-</section> -->
-
-    <div class="column is-8 search-area">
-      <div class="field has-addons">
-        <p class="control">
-          <input class="is-large is-hovered input" type="text" placeholder="Search Book">
-        </p>
-        <p class="control">
-          <button class="button is-large">
-            Search
-          </button>
-        </p>
-      </div>
-    </div>
-    
-  </section>
-
-  <!-- main container where all books and content will live -->
-
-  <main class="main-body">
-
-    <!-- Carousel -->
-    <!-- book slides will most likely be added dynamically with js, here for demonstration -->
-    <!-- TODO: design the layout to be used for each slide -->
-
+ <!-- main container where all books and content will live -->
+  <section class="main-body">
     <section class="library carousel">
       <div class="swiper-container">
         <h1 class="carousel-header">Library</h1>
         <div class="swiper-wrapper">
           <div class="swiper-slide">Book 1</div>
           <div class="swiper-slide">Book 2</div>
-          <div class="swiper-slide">Book 3</div>
+          <!-- <div class="swiper-slide">Book 3</div>
           <div class="swiper-slide">Book 4</div>
           <div class="swiper-slide">Book 5</div>
-          <div class="swiper-slide">Book 6</div>
+          <div class="swiper-slide">Book 6</div> -->
         </div>
     </section>
 
@@ -160,10 +102,10 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">Book 1</div>
           <div class="swiper-slide">Book 2</div>
-          <div class="swiper-slide">Book 3</div>
+          <!-- <div class="swiper-slide">Book 3</div>
           <div class="swiper-slide">Book 4</div>
           <div class="swiper-slide">Book 5</div>
-          <div class="swiper-slide">Book 6</div>
+          <div class="swiper-slide">Book 6</div> -->
         </div>
     </section>
 
@@ -173,32 +115,23 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">Book 1</div>
           <div class="swiper-slide">Book 2</div>
-          <div class="swiper-slide">Book 3</div>
+          <!-- <div class="swiper-slide">Book 3</div>
           <div class="swiper-slide">Book 4</div>
           <div class="swiper-slide">Book 5</div>
-          <div class="swiper-slide">Book 6</div>
+          <div class="swiper-slide">Book 6</div> -->
         </div>
     </section>
 
-  </main>
+  </section>
 
   <!-- <section class="">
+</section> -->
+
 </main>
 
 <section class="sidebar">
     <nav class="sidebar-list">
         <ul>
-            <!-- <li class="sidebar-item"><div class="column is-8 search-area">
-                <div class="field has-addons">
-                  <p class="control">
-                    <input class="is-large  input" type="text" placeholder="Search Book" />
-                  </p>
-                  <p class="control">
-                    <button class="button is-large searchBtn">Search</button>
-                  </p>
-                </div>
-              </div>
-            </li> -->
             <li class="sidebar-item"><a class="sidebar-anchor" href="#">Library</a></li>
             <li class="sidebar-item"><a class="sidebar-anchor" href="#">Wish List</a></li>
             <li class="sidebar-item"><a class="sidebar-anchor" href="#">Swap List</a></li>
@@ -209,13 +142,10 @@
 
   <footer class="page-footer"></footer>
 
-  <footer class="page-footer"></footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="./Javascript/app.js"></script>
-</body>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="./Javascript/burger-bar.js"></script>
+  <script src="./Javascript/carousel.js"></script>
 </body>
 </html>
