@@ -1,5 +1,6 @@
 const searchEl = document.getElementById("search-bar");
 const searchBtnEl = document.getElementById("search-btn");
+const resultsUrl = "./results.html";
 
 const APIKey = "AIzaSyAV4WnTD1SBTUokHDh8EUM4TtrOMs81Dig";
 function bookSearch(searchedBook) {
@@ -15,4 +16,6 @@ function bookSearch(searchedBook) {
 searchBtnEl.addEventListener("click",function(){
     const userInput = searchEl.value;
     bookSearch(userInput);
+    document.location.replace(resultsUrl);
 })
+
