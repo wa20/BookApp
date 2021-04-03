@@ -18,6 +18,7 @@ ul {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color:  rgba(239, 130, 84, 0.899);
     /* z-index: 0; */
   }
 }
@@ -31,6 +32,7 @@ ul {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    color: rgba(239, 130, 84, 0.899);
     /* z-index: 0; */
   }
 }
