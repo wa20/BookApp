@@ -1,12 +1,4 @@
 /* media queries to control number of slides  */
-.main-body{
-    width: 100vw;
-    min-height: 70vh;
-    background: #2D3142;;
-    padding: 1rem;
-}
-
-
 .carousel {
     margin: 20px;
 }
