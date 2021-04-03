@@ -8,12 +8,12 @@
     color: white;
     width: 100vw;
     min-height: 10vh;
-    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322);
+    /* box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322); */
     height: auto;
-    background: #2d314270;
+    background: #2d3142e0;
     position: fixed;
     top: 0;
-    z-index: 5;
+    z-index: 2;
   }
 }
 
@@ -26,7 +26,7 @@
     align-items: center;
     width: 100vw;
     min-height: 10vh;
-    background: #2d31425b;
+    background: #2d3142;
     position: fixed;
     top: 0;
     z-index: 2;
@@ -137,7 +137,7 @@ li::after {
 /* ==============================================
 -Burger Bar
 ============================================== */
-
+/* 
 @media (min-width: 950px) {
   .burger {
     display: none;
@@ -151,24 +151,24 @@ li::after {
     align-items: center;
     padding: 1.5rem;
   }
-}
+} */
 
 /* ==============================================
 -Burger Size
 ============================================== */
 
 /* small-laptop / tablet view */
-@media (max-width: 949px) and (min-width: 480px) {
+/* @media (max-width: 949px) and (min-width: 480px) {
   .fa-bars {
     font-size: 4rem;
     color: aliceblue;
   }
-}
+} */
 
 /* mobile view */
-@media (max-width: 479px) {
+/* @media (max-width: 479px) {
   .fa-bars {
     font-size: 3rem;
     color: aliceblue;
   }
-}
+} */

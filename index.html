@@ -40,6 +40,84 @@
 
   <section class="hero">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./background.css" />
+    <link rel="stylesheet" href="./Style-Sheets/body.css" />
+    <link rel="stylesheet" href="./Style-Sheets/footer.css" />
+    <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
+    <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />    
+    <link rel="stylesheet" href="./Style-Sheets/Slideout.css" />
+  <title>BookApp</title>
+</head>
+
+
+
+<body>
+
+
+  <nav class="nav-right visible-xs">
+    <div class="burgerBtn" id="burgerBtn">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
+  </nav>
+  <!-- nav-right -->
+
+  <main class="mainBody">
+
+
+  <header class="fixed-navbar">
+      <div class="logo">BookAPP</div>
+      <nav class="navbar-options breadcrumb is-right" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Swap List</a></li>
+          </ul>
+      </nav>
+
+      <div class="nav-right hidden-xs">
+        <div class="burgerBtn" id="burgerBtn">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </div>
+      <!-- nav-right -->
+   
+  </header>
+
+  <section class="hero">
+    <div class="column is-8 search-area">
+      <div class="field has-addons">
+        <p class="control">
+          <input class="is-large is-hovered input" type="text" placeholder="Search Book" />
+        </p>
+        <p class="control">
+          <button class="button is-large searchBtn">Search</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="main-body"></section>
+
+  <!-- <section class="">
+
+</section> -->
+
     <div class="column is-8 search-area">
       <div class="field has-addons">
         <p class="control">
@@ -52,7 +130,7 @@
         </p>
       </div>
     </div>
-
+    
   </section>
 
   <!-- main container where all books and content will live -->
@@ -105,8 +183,31 @@
   </main>
 
   <!-- <section class="">
+</main>
 
-    </section> -->
+<section class="sidebar">
+    <nav class="sidebar-list">
+        <ul>
+            <!-- <li class="sidebar-item"><div class="column is-8 search-area">
+                <div class="field has-addons">
+                  <p class="control">
+                    <input class="is-large  input" type="text" placeholder="Search Book" />
+                  </p>
+                  <p class="control">
+                    <button class="button is-large searchBtn">Search</button>
+                  </p>
+                </div>
+              </div>
+            </li> -->
+            <li class="sidebar-item"><a class="sidebar-anchor" href="#">Library</a></li>
+            <li class="sidebar-item"><a class="sidebar-anchor" href="#">Wish List</a></li>
+            <li class="sidebar-item"><a class="sidebar-anchor" href="#">Swap List</a></li>
+        </ul>
+    </nav>
+  </section>
+
+
+  <footer class="page-footer"></footer>
 
   <footer class="page-footer"></footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -114,4 +215,7 @@
   <script src="./Javascript/app.js"></script>
 </body>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="./Javascript/burger-bar.js"></script>
+</body>
 </html>
