@@ -41,11 +41,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
     background: #2D3142;
     position: fixed;
     top: 0;
     z-index: 2;
+    color: white;
   }
 }
 

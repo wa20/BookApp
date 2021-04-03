@@ -23,11 +23,18 @@
   .input {
     width: 40vw;
   }
+  .result-search{
+    display: none;
+  }
 }
 
 /* small-laptop / tablet view / mobile view */
 @media (max-width: 949px) {
   .search-area {
     display: none;
+  }
+
+  .input {
+    width: 40vw;
   }
 }

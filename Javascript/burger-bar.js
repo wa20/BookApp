@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(".burgerBtn").toggleClass("active");
     $(".mainBody").toggleClass("move-to-left");
     $(".sidebar-item").toggleClass("active");
+    $(".sidebar").toggleClass("side-visible");
     // add another row to show the side-bar
   }
 
