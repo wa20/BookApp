@@ -1,0 +1,31 @@
+.results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100vw;
+    height: 60vh;
+    color: white;
+}
+
+#results-header {
+    color: white;
+}
+
+@media (min-width: 950px) {
+    .search-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .input {
+      width: 40vw;
+    }
+  }
+  
+  /* small-laptop / tablet view / mobile view */
+  @media (max-width: 949px) {
+    .search-area {
+      display: none;
+    }
+  }
