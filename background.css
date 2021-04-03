@@ -39,6 +39,7 @@ ol, ul {
 /* ==============================================
 ============================================== */
 
+<<<<<<< HEAD
 body {
   display: flex;
   flex-direction: column;
@@ -50,3 +51,18 @@ body {
   transition: transform .7s ease-in-out;
   z-index: 2;
 }
+=======
+
+
+  body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    -webkit-transition: transform .7s ease-in-out;
+    -moz-transition: transform .7s ease-in-out;
+    -ms-transition: transform .7s ease-in-out;
+    -o-transition: transform .7s ease-in-out;
+    transition: transform .7s ease-in-out;
+    z-index: 2;
+  }
+>>>>>>> 878708befb8770de8c786c65b4dbe9422b4eb995

@@ -22,6 +22,7 @@
         justify-content: center;
         align-items: center;
     }
+<<<<<<< HEAD
     .input {
         width: 40vw;
     }
@@ -43,6 +44,28 @@
 
 @media (max-width: 949px) {
     .search-area {
+=======
+    .input{
+        width: 40vw;
+    }
+  }
+
+.button{
+    cursor: pointer;
+    background:rgb(160, 0, 0) ;
+    color: white;
+}
+
+  .button:hover{
+      cursor: pointer;
+     background:rgb(255, 255, 255) ;
+     color:rgb(160, 0, 0)
+  }
+  
+  /* small-laptop / tablet view / mobile view */
+  @media (max-width: 949px) {
+     .search-area{
+>>>>>>> 878708befb8770de8c786c65b4dbe9422b4eb995
         display: none;
     }
 }

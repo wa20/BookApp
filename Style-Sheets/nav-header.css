@@ -114,13 +114,18 @@
 }
 
 /* below code does not seem to work */
+<<<<<<< HEAD
 
 li::before, li::after {
+=======
+li::before,
+li::after {
+>>>>>>> 878708befb8770de8c786c65b4dbe9422b4eb995
   color: rgb(255, 255, 255);
 }
 
 @media (min-width: 950px) {
-  .navbar-options>h3 {
+  .navbar-options > h3 {
     margin: 0;
   }
 }
@@ -173,4 +178,8 @@ li::before, li::after {
     font-size: 3rem;
     color: aliceblue;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 878708befb8770de8c786c65b4dbe9422b4eb995
