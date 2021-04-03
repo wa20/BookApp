@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css"
-    /> -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -19,58 +15,94 @@
     <link rel="stylesheet" href="./Style-Sheets/body.css" />
     <link rel="stylesheet" href="./Style-Sheets/footer.css" />
     <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
-    <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />
-    <link rel="stylesheet" href="./Style-Sheets/slideout-navbar.css" />
-    <!-- <link rel="stylesheet" href="./" /> -->
-    <title>BookApp</title>
-  </head>
+    <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />    
+    <link rel="stylesheet" href="./Style-Sheets/Slideout.css" />
+    <link rel="stylesheet" href="./style.css">
+  <title>BookApp</title>
+</head>
 
-  <body>
-    <!-- fixed header bar -->
-    <header class="fixed-navbar">
+
+
+<body>
+
+
+  <nav class="nav-right visible-xs">
+    <div class="burgerBtn" id="burgerBtn">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
+  </nav>
+  <!-- nav-right -->
+
+  <main class="mainBody">
+
+
+  <header class="fixed-navbar">
       <div class="logo">BookAPP</div>
-      <nav class=" navbar-options breadcrumb is-right" aria-label="breadcrumbs">
-        <ul>
-          <li><a href="#">Library</a></li>
-          <li><a href="#">Wish List</a></li>
-          <li><a href="#">Swap List</a></li>
-        </ul>
+      <nav class="navbar-options breadcrumb is-right" aria-label="breadcrumbs">
+          <ul>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Wish List</a></li>
+              <li><a href="#">Swap List</a></li>
+          </ul>
       </nav>
-      <div class="burger"><i class="fas fa-bars"></i></div>
-    </header>
-
-    <!-- hero overlay of search bar and text -->
-
-    <section class="hero">
-
-        <div class="column is-8 search-area">
-              <div class="field has-addons">
-                <p class="control">
-                  <input class="is-large is-hovered input" type="text" placeholder="Search Book">
-                </p>
-                <p class="control">
-                  <button class="button is-large">
-                    Search
-                  </button>
-                </p>
-              </div>
+  
+  
+    
+      <div class="nav-right hidden-xs">
+        <div class="burgerBtn" id="burgerBtn">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
         </div>
+      </div>
+      <!-- nav-right -->
+   
+  </header>
 
-    </section>
+  <section class="hero">
+    <div class="column is-8 search-area">
+      <div class="field has-addons">
+        <p class="control">
+          <input
+            class="is-large is-hovered input"
+            type="text"
+            placeholder="Search Book"
+          />
+        </p>
+        <p class="control">
+          <button class="button is-large searchBtn">Search</button>
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <!-- main container where all books and content will live -->
 
-    <main class="main-body">
+  <section class="main-body"></section>
+
+  <!-- <section class="">
+
+</section> -->
 
 
-    </main>
+</main>
 
-    <!-- <section class="">
+<section class="sidebar">
+    <nav class="sidebar-list">
+        <ul>
+            <li class="sidebar-item"><a class="sidebar-anchor" href="#">Library</a></li>
+            <li class="sidebar-item"><a class="sidebar-anchor" href="#">Wish List</a></li>
+            <li class="sidebar-item"><a class="sidebar-anchor" href="#">Swap List</a></li>
+        </ul>
+    </nav>
+  </section>
 
-    </section> -->
 
-    <footer class="page-footer"></footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="./Javascript/app.js"></script>
-  </body>
+  <footer class="page-footer"></footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="./Javascript/burger-bar.js"></script>
+</body>
 </html>
