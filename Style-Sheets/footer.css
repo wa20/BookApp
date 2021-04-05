@@ -1,17 +1,18 @@
 @media (min-width: 950px) {
 .page-footer{
-        background: transparent;
+        background: rgba(239, 130, 84, 0.899);;
+
         width: 100vw;
-        height: 20vh;
+        height: 10vh;
        
         }
 }
 
 @media (max-width: 949px) {
         .page-footer{
-                background: transparent;
+                background: rgba(239, 130, 84, 0.899);;
                 width: 100vw;
-                height: 20vh;
+                height: 10vh;
              
                 }
 }
