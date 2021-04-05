@@ -1,6 +1,6 @@
 @media (min-width: 950px) {
 .page-footer{
-        background: rgba(239, 130, 84, 0.899);;
+        background: transparent;
 
         width: 100vw;
         height: 10vh;
@@ -10,7 +10,7 @@
 
 @media (max-width: 949px) {
         .page-footer{
-                background: rgba(239, 130, 84, 0.899);;
+                background: transparent;
                 width: 100vw;
                 height: 10vh;
              
