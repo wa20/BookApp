@@ -1,4 +1,9 @@
-/* @media (min-width: 950px) { */
+
+/* ==============================================
+- Search Area
+============================================== */
+/* laptop view */
+@media (min-width: 950px) {
 .hero {
   display: flex;
   justify-content: center;
@@ -7,8 +12,40 @@
   width: 100vw;
   height: 60vh;
   margin-top: 10rem;
+  }
 }
-/* } */
+
+
+/* small-laptop / tablet view */
+@media (max-width: 949px) and (min-width: 480px) {
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100vw;
+  height: 40vh;
+  margin-top: 10rem;
+  }
+}
+
+
+/* mobile view */
+@media (max-width: 479px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    width: 100vw;
+    height: 30vh;
+    /* margin-top: 10rem; */
+    }
+
+}
+
+
+
 
 /* ==============================================
 - Search Area
@@ -39,3 +76,5 @@
     width: 70vw;
   }
 }
+
+

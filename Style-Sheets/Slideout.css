@@ -19,10 +19,22 @@ shift boday to the left
 - hidden Slideout sidebar  container
 ============================================== */
 
+@media (min-width: 949px) { 
+  .side-hidden {
+    display: none;
+  }
+}
+
 @media (max-width: 949px) { 
-  .sidebar {
+  .side-hidden {
     transition: all 1.0s 0.5s ease-in;
    display: hidden;
+  }
+}
+
+@media (min-width: 949px) { 
+  .side-visible {
+  display: none;
   }
 }
 
@@ -36,6 +48,7 @@ shift boday to the left
   z-index: 1;
   right: 0;
   background-color: rgba(239, 130, 84, 0.899);
+  transition: all 1.0s 0.5s ease-in;
   /* background-color: #ef8254; */
 }
 }
