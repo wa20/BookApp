@@ -12,6 +12,15 @@
     color: white;
 }
 
+.center {
+  text-align: center;
+
+}
+
+.imgSize {
+  width: 0.5vw;
+}
+
 @media (min-width: 950px) {
     .search-area {
       display: flex;
