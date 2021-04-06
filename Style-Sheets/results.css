@@ -8,8 +8,8 @@
     color: white;
 }
 
-#results-header {
-    color: white;
+.black {
+    color: black;
 }
 
 .center {
@@ -17,9 +17,6 @@
 
 }
 
-.imgSize {
-  width: 0.5vw;
-}
 
 @media (min-width: 950px) {
     .search-area {
