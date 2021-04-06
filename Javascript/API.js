@@ -50,7 +50,7 @@ function printResults(searchedBook) {
                 bookInfoEl.setAttribute("class", "ui grid content");
 
                 const imgEl = document.createElement("div");
-                imgEl.setAttribute("class", "four wide column center")
+                imgEl.setAttribute("class", "two wide column center")
                 bookInfoEl.appendChild(imgEl);
 
                 var imgTrueOrFalse = data.items[i].volumeInfo.imageLinks;
@@ -68,7 +68,7 @@ function printResults(searchedBook) {
                 }
 
                 const content = document.createElement("div");
-                content.setAttribute("class", "twelve wide column");
+                content.setAttribute("class", "fourteen wide column");
                 bookInfoEl.appendChild(content);
 
                 const bookTitle = document.createElement("h1");
