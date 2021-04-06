@@ -5,23 +5,25 @@ var resultHeaderEl = document.getElementById("results-header");
 
 var searchedBook = JSON.parse(localStorage.getItem("input"));
 
-console.log(typeof searchedBook);
+var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+/* console.log(typeof searchedBook);
 
 console.log(resultEl);
 console.log(searchEl);
 console.log(resultHeaderEl);
+ */
 
 
-
-const APIKey = "AIzaSyAV4WnTD1SBTUokHDh8EUM4TtrOMs81Dig";
+const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 
 function printResults(searchedBook) {
     resultHeaderEl.textContent = "Search results for: " + searchedBook;
-    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=40" + "&key=" + APIKey;
+    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=3" + "&key=" + APIKey;
     fetch(requestUrl)
         .then(function(response){
-            console.log(response);
-            console.log(response.url);
+            /* console.log(response);
+            console.log(response.url); */
             return response.json();
         })
         .then(function(data){
@@ -38,7 +40,7 @@ function printResults(searchedBook) {
 
                 const wishlistBtn = document.createElement("div");
                 wishlistBtn.innerHTML = "Add to wishlist";
-                wishlistBtn.setAttribute("class", "ui green button")
+                wishlistBtn.setAttribute("class", "ui green button wishlistButton")
                 topBtns.appendChild(wishlistBtn);
 
                 const LibraryBtn = document.createElement("div");
@@ -102,7 +104,7 @@ function printResults(searchedBook) {
                 }
 
                 var averageRatingTrueOrFalse = data.items[i].volumeInfo.averageRating;
-                console.log(averageRatingTrueOrFalse);
+                /* console.log(averageRatingTrueOrFalse); */
                 if(averageRatingTrueOrFalse != undefined) {
                     const ratingEl = document.createElement("p");
                     ratingEl.textContent = "Average rating:" + data.items[i].volumeInfo.averageRating + "/5";
@@ -126,7 +128,20 @@ function printResults(searchedBook) {
                 resultCardEl.appendChild(bookInfoEl);
                 resultCardEl.appendChild(bottomBtn);
                 resultEl.appendChild(resultCardEl);
+                
+                
+
             }
+            var wishlistButtons = document.querySelectorAll(".wishlistButton")
+            console.log(wishlistButtons);
+            wishlistButtons.forEach(element => {
+                element.addEventListener("click", function(event){
+                    clickIndex = (Array.from(wishlistButtons).indexOf(event.target));
+                    console.log("Clicked on: " + clickIndex);
+                    wishlist.push(data.items[clickIndex].volumeInfo);
+                    localStorage.setItem("bookTitle", JSON.stringify(wishlist))
+                })
+            })
         })
 }
 
