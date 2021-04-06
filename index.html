@@ -34,15 +34,15 @@
   <main class="mainBody">
 
     <header class="fixed-navbar">
-    <div class="logo">BookAPP</div>
-      
-   <nav class="navbar-options">
-    <ul class="ui secondary menu">
-      <li class="menuItem"><a class="item ui orange  sub header" href="#">LIBRARY</a></li>
-      <li class="menuItem"><a class="item ui orange  sub header" href="#">WISH LIST</a></li>
-      <li class="menuItem"><a class="item ui orange  sub header" href="#">SWAP LIST</a></li>
-    </ul>
-  </nav>  
+      <div class="logo">BookAPP</div>
+
+      <nav class="navbar-options">
+        <ul class="ui secondary menu">
+          <li class="menuItem"><a class="item ui orange  sub header" href="#">LIBRARY</a></li>
+          <li class="menuItem"><a class="item ui orange  sub header" href="#">WISH LIST</a></li>
+          <li class="menuItem"><a class="item ui orange  sub header" href="#">SWAP LIST</a></li>
+        </ul>
+      </nav>
       <!--  -->
       <div class="nav-right hidden-xs">
         <div class="burgerBtn" id="burgerBtn">
@@ -55,16 +55,16 @@
     </header>
 
     <section class="hero">
-      
-      <!-- search space and button -->
-    <div class="search-area">
-      <a class="ui fluid action input huge" id="redirectEl">
-        <input class="huge" type="text" placeholder="Search..." id="search-bar">
-        <button class="ui button searchBtn red huge" id="search-btn">Search</button>
-      </a>
-    </div>
 
-    
+      <!-- search space and button -->
+      <div class="search-area">
+        <a class="ui fluid action input huge" id="redirectEl">
+          <input class="huge" type="text" placeholder="Search..." id="search-bar">
+          <button class="ui button searchBtn red huge" id="search-btn">Search</button>
+        </a>
+      </div>
+
+
 
     </section>
 
@@ -74,13 +74,35 @@
         <div class="swiper-container">
           <h1 class="carousel-header">LIBRARY</h1>
           <div class="swiper-wrapper">
-            <div class="swiper-slide">Book 1</div>
-            <div class="swiper-slide">Book 2</div>
-            <!-- <div class="swiper-slide">Book 3</div>
-          <div class="swiper-slide">Book 4</div>
-          <div class="swiper-slide">Book 5</div>
-          <div class="swiper-slide">Book 6</div> -->
+
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/1984.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/hobbit.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/TheGreatGatsby.gif" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/1984.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/hobbit.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/TheGreatGatsby.gif" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/1984.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/1984.jpg" alt="">
+            </div>
+            <div class="swiper-slide"><img class="book-cover" src="./Assets/book-covers/1984.jpg" alt="">
+            </div>
+
           </div>
+          <!-- <div class="swiper-pagination"></div> -->
+          <!-- Add Arrows -->
+          <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        </div>
+
+
+
       </section>
 
       <section class="wish-list carousel">
@@ -90,9 +112,9 @@
             <div class="swiper-slide">Book 1</div>
             <div class="swiper-slide">Book 2</div>
             <!-- <div class="swiper-slide">Book 3</div>
-          <div class="swiper-slide">Book 4</div>
-          <div class="swiper-slide">Book 5</div>
-          <div class="swiper-slide">Book 6</div> -->
+        <div class="swiper-slide">Book 4</div>
+        <div class="swiper-slide">Book 5</div>
+        <div class="swiper-slide">Book 6</div> -->
           </div>
       </section>
 
@@ -103,29 +125,49 @@
             <div class="swiper-slide">Book 1</div>
             <div class="swiper-slide">Book 2</div>
             <!-- <div class="swiper-slide">Book 3</div>
-          <div class="swiper-slide">Book 4</div>
-          <div class="swiper-slide">Book 5</div>
-          <div class="swiper-slide">Book 6</div> -->
+        <div class="swiper-slide">Book 4</div>
+        <div class="swiper-slide">Book 5</div>
+        <div class="swiper-slide">Book 6</div> -->
           </div>
       </section>
+
+
+      <!-- Modal -->
+      <div class="ui modal">
+        <i class="close icon"></i>
+        <div id="modal-title" class="header">
+          Book Title
+        </div>
+        <div class="image content">
+          <div id="modal-image" class="image">
+            <!-- <img class="image" src="./Assets/book-covers/1984.jpg" alt=""> -->
+          </div>
+          <div id="modal-description" class="description">
+            Book description
+          </div>
+        </div>
+        <div class="actions">
+          <div id="modal-remove-btn" class="ui button">Remove from library</div>
+          <div id="modal-ok-btn" class="ui button">OK</div>
+        </div>
+      </div>
 
     </section>
 
     <!-- <section class="">
 </section> -->
-
   </main>
 
   <section class="sidebar side-hidden">
     <nav class="sidebar-list">
       <ul class="side-menu">
-        <li class="sidebar-item">  
-          <div class="slidebar-search"> 
+        <li class="sidebar-item">
+          <div class="slidebar-search">
             <div class="ui action input ">
               <input class="huge" type="text" placeholder="Search..." id="search-bar">
               <button class="ui icon button red huge"><i class="search icon" id="search-btn"></i></button>
             </div>
-          </div> 
+          </div>
         </li>
         <li class="sidebar-item"><a class="sidebar-anchor" href="#">Library</a></li>
         <li class="sidebar-item"><a class="sidebar-anchor" href="#">Wish List</a></li>
@@ -133,7 +175,7 @@
       </ul>
     </nav>
   </section>
-  
+
 
 
   <footer class="page-footer">
