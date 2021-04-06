@@ -2,10 +2,10 @@ const searchBtnEl = document.getElementById("search-btn");
 const searchEl = document.getElementById("search-bar");
 const redirectEl = document.getElementById("redirectEl");
 
-console.log(searchBtnEl);
-/* console.log(searchEl); */
+/* console.log(searchBtnEl);
+console.log(searchEl); */
 const resultsUrl = "./results.html";
-const APIKey = "AIzaSyAV4WnTD1SBTUokHDh8EUM4TtrOMs81Dig";
+const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 
 var formSubmitHandler = function() {
 /*     event.preventDefault(); */
@@ -19,7 +19,7 @@ var formSubmitHandler = function() {
 };
 
 var bookSearch = function(searchedBook) {
-    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=40" + "&key=" + APIKey;
+    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=3" + "&key=" + APIKey;
     fetch(requestUrl)
         .then(function(response) {
             if(response.ok) {
@@ -35,7 +35,7 @@ var bookSearch = function(searchedBook) {
 };
 
 function bookSearch(searchedBook) {
-    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=40" + "&key=" + APIKey;
+    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=3" + "&key=" + APIKey;
     fetch(requestUrl)
         .then(function(response){
             
