@@ -7,7 +7,7 @@ console.log(searchBtnEl);
 const resultsUrl = "./results.html";
 const APIKey = "AIzaSyAV4WnTD1SBTUokHDh8EUM4TtrOMs81Dig";
 
-var formSubmitHandler = function(event) {
+var formSubmitHandler = function() {
 /*     event.preventDefault(); */
     var userInput = searchEl.value;
     localStorage.setItem("input", JSON.stringify(userInput))
@@ -59,5 +59,7 @@ searchBtnEl.addEventListener("click", function(){
     console.log("hi");
     formSubmitHandler();
 });
+
+
 
 
