@@ -1,6 +1,6 @@
 let swiper = new Swiper('.swiper-container', {
-    slidesPerView: 6,
-    spaceBetween: 30,
+    slidesPerView: 'auto',
+    spaceBetween: 40,
     // slidesPerGroup: 6,
     // loop: true,
     // loopFillGroupWithBlank: true,
