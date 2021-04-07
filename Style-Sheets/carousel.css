@@ -59,6 +59,6 @@
 }
 
 
-.library-cover:hover, .wishlist-cover:hover, .swaplist-cover:hover, .friend2-list-hover, .friend2-list-hover {
+.library-cover:hover, .wishlist-cover:hover, .swaplist-cover:hover, .friend1-list-hover, .friend2-list-hover {
     transform: scale(1.2);
 }
