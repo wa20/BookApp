@@ -73,8 +73,13 @@
   }
 
   .input {
-    width: 70vw;
+    width:75vw;
   }
+
+  .slidebar-seach{
+
+    
+}
 }
 
 
@@ -82,3 +87,14 @@
 .searchOps{
   padding: 1rem;
 }
+
+@media (min-width: 950px) {
+.fa-search{
+  font-size: 2rem;
+}
+}
+@media (max-width: 949px) {
+  .fa-search{
+    font-size: 1.0rem;
+  }
+  }
