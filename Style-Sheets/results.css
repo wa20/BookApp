@@ -92,18 +92,18 @@
     font-size: 2.5rem;
   }
 
-  .bookCategory {
+  .bookAuthor {
     color: rgba(239, 130, 84);
-    font-size: 2.2rem;
+    font-size: 2.0rem;
   }
   .bookRating{
     color: rgb(255, 218, 56);
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 
-  .bookRating2{
+  .noBookRating{
     color: rgb(104, 104, 104);
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 
 }
@@ -115,7 +115,7 @@
     color: rgba(239, 130, 84);
     font-size: 2.0rem;
   }
-  .bookCategory {
+  .bookAuthor {
     color: rgba(239, 130, 84);
     font-size: 1.7rem;
   }
@@ -125,10 +125,13 @@
     font-size: 1.5rem;
   }
 
-  .bookRating2{
+  .noBookRating{
     color: rgb(104, 104, 104);
     font-size: 1.5rem;
+   
   }
+
+
 }
 
 
@@ -138,7 +141,7 @@
     color: rgba(239, 130, 84);
     font-size: 1.5rem;
   }
-  .bookCategory {
+  .bookAuthor {
     color: rgba(239, 130, 84);
     font-size: 1.2rem;
   }
@@ -147,8 +150,12 @@
     font-size: 1.0rem;
   }
 
-  .bookRating2{
+  .noBookRating{
     color: rgb(104, 104, 104);
     font-size: 1.0rem;
   }
+}
+
+.bookCategory,.noBookCategory {
+  color: rgb(241, 241, 241);
 }
