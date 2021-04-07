@@ -76,6 +76,7 @@
     align-items: center;
     padding: 2.5rem;
     font-size: 2.5rem;
+    color:  rgba(239, 130, 84, 0.899);
   }
 }
 
@@ -88,6 +89,7 @@
     align-items: center;
     padding: 1.5rem;
     font-size: 2.5rem;
+    color:  rgba(239, 130, 84, 0.899);
   }
 }
 
