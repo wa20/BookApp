@@ -8,6 +8,7 @@ var resultEl = document.getElementById("main-body");
 var resultHeaderEl = document.getElementById("results-header");
 
 var searchedBook = JSON.parse(localStorage.getItem("input"));
+var dropdownSelection = JSON.parse(localStorage.getItem("dropdown"));
 
 var wishlist = JSON.parse(localStorage.getItem("wishlistBookInfo")) || [];
 var library = JSON.parse(localStorage.getItem("libraryBookInfo")) || [];
@@ -16,12 +17,49 @@ const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 
 function printResults(searchedBook) {
   resultHeaderEl.textContent = "Search results for: " + searchedBook;
-  var requestUrl =
-    "https://www.googleapis.com/books/v1/volumes?q=" +
-    searchedBook +
-    "&maxResults=5" +
-    "&key=" +
-    APIKey;
+  if(dropdownSelection === "all") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  }
+  else if(dropdownSelection === "title"){
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+intitle:" + 
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  } else if(dropdownSelection === "author") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+inauthor:" + 
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  } else if(dropdownSelection === "ISBN") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+isbn:" + 
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  } else if(dropdownSelection === "category") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+subject:" + 
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  }
+        
+
   fetch(requestUrl)
     .then(function (response) {
       /* console.log(response);
