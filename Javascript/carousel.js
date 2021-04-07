@@ -44,6 +44,8 @@ let libraryArrayLength = libraryArray.length;
 let wishlistArray = JSON.parse(localStorage.getItem("wishlistBookInfo"));
 let wishlistArrayLength = wishlistArray.length;
 let swaplistArray = JSON.parse(localStorage.getItem("swaplistBookInfo"));
+let friendslistArray = JSON.parse(localStorage.getItem("friendslistBookInfo"));
+let friendslistArrayLength = friendslistArray.length;
 
 
 // Render library
@@ -99,6 +101,30 @@ if (wishlistArray !== null && wishlistArrayLength > 0) {
         document.getElementById("wishlist-book-cover").appendChild(bookCoverContainer);
     }
 }
+
+// Render friendslist
+if (friendslistArray !== null && friendslistArrayLength > 0) {
+
+
+    for (let i = 0; i < friendslistArrayLength; i++) {
+
+        let bookCover = document.createElement("img");
+        try {
+            bookCover.src = friendslistArray[i].imageLinks.thumbnail;
+        }
+        catch {
+            bookCover.src = "./Assets/no-book-cover.png";
+        }
+        bookCover.classList.add("friend1-list-cover");
+
+        let bookCoverContainer = document.createElement("div");
+        bookCoverContainer.classList.add("swiper-slide");
+
+        bookCoverContainer.appendChild(bookCover);
+        document.getElementById("friend1-book-cover").appendChild(bookCoverContainer);
+    }
+}
+
 
 /* Modals */
 
