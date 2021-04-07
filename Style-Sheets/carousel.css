@@ -54,6 +54,11 @@
    /* background: rgb(255, 251, 251); */
 }
 
-.book-cover {
-  height: 100%;
+.library-cover, .wishlist-cover, .swaplist-cover {
+    height: 100%;
+}
+
+
+.library-cover:hover, .wishlist-cover:hover, .swaplist-cover:hover {
+    transform: scale(1.2);
 }
