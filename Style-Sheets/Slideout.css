@@ -192,9 +192,14 @@ shift boday to the left
   transition: all 1.0s .6s ease-in-out;
 }
 
+.sidebar-item:nth-child(4) {
+  /* -webkit-transition: all .7s .6s ease-in-out; */
+  transition: all 1.0s .8s ease-in-out;
+}
+
 .sidebar-item:last-child {
   /* -webkit-transition: all .7s .8s ease-in-out; */
-  transition: all 1.0s .6s ease-in-out;
+  transition: all 1.0s .8s ease-in-out;
 }
 
 
