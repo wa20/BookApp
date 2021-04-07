@@ -38,9 +38,9 @@ var bookSearch = function(searchedBook) {
     fetch(requestUrl)
         .then(function(response) {
             if(response.ok) {
-                console.log(response);
+                /* console.log(response); */
                 response.json().then(function(data) {
-                    console.log(data);
+                    /* console.log(data); */
                     pageRedirect();    
                 });
             } else {
@@ -54,9 +54,9 @@ var bookSearchNav = function(searchedBook) {
     fetch(requestUrl)
         .then(function(response) {
             if(response.ok) {
-                console.log(response);
+                /* console.log(response); */
                 response.json().then(function(data) {
-                    console.log(data);
+                    /* console.log(data); */
                     pageRedirectNav();    
                 });
             } else {
@@ -68,24 +68,24 @@ var bookSearchNav = function(searchedBook) {
 function pageRedirect() {
     redirectEl.setAttribute('href', './results.html');
     searchBtnEl.innerHTML = "Are you sure?";
-    console.log(searchBtnEl);   
-    console.log(redirectEl);  
+    /* console.log(searchBtnEl);   
+    console.log(redirectEl);  */ 
 }
 
 function pageRedirectNav() {
     redirectNavEl.setAttribute('href', './results.html');
-    console.log(searchBtnNavEl);   
-    console.log(redirectNavEl);  
+    /* console.log(searchBtnNavEl);   
+    console.log(redirectNavEl); */  
 }
 
 
 searchBtnEl.addEventListener("click", function(){
-    console.log("hi");
+   /*  console.log("hi"); */
     formSubmitHandler();
 });
 
 searchBtnNavEl.addEventListener("click", function(){
-    console.log("hi");
+    /* console.log("hi"); */
     searchBtnNavEl.classList.remove("search");
     searchBtnNavEl.setAttribute("class", "arrow right icon");
     formSubmitHandlerNav();
