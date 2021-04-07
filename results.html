@@ -66,18 +66,30 @@
      
        <!-- search space and button with icon, used in smaller space screen -->
     <div class="result-search"> 
-      <div class="ui action input">
-        <input class="huge" type="text" placeholder="Search..." id="search-bar">
-        <button class="ui icon button red huge"><i class="search icon" id="search-btn"></i></button>
-      </div>
+      <a class="ui action input large" id="redirectEl">
+        <input class="" type="text" placeholder="Search..." id="search-bar">
+        <select class="ui compact selection dropdown">
+          <option selected="" value="articles">All</option>
+          <option value="all">Author</option>
+          <option value="products">ISBN</option>
+          <option value="products">Category</option>
+        </select>
+        <button class="ui button searchBtn red large" id="search-btn"><i class="fas fa-search"></i></button>
+      </a>
     </div> 
 
        <!-- search space and button -->
       <div class="search-area">
-      <div class="ui fluid action input huge">
-        <input class="huge" type="text" placeholder="Search..." id="search-bar-results">
-        <button class="ui button searchBtn red huge" id="search-btn-results">Search</button>
-      </div>
+        <a class="ui fluid action input massive" id="redirectEl">
+          <input class="huge" type="text" placeholder="Search..." id="search-bar">
+          <select class="ui compact selection dropdown">
+            <option selected="" value="articles">All</option>
+            <option value="all">Author</option>
+            <option value="products">ISBN</option>
+            <option value="products">Category</option>
+          </select>
+          <button class="ui button searchBtn red" id="search-btn"><i class="fas fa-search"></i></button>
+        </a>
     </div>
 
     </section>
@@ -96,7 +108,7 @@
       <ul>
 
 
-        <li class="sidebar-item"><a class="sidebar-anchor" href="./index.html#library">>LIBRARY</a></li>
+        <li class="sidebar-item"><a class="sidebar-anchor" href="./index.html#library">LIBRARY</a></li>
         <li class="sidebar-item"><a class="sidebar-anchor" href="./index.html#wishlist">WISH LIST</a></li>
         <li class="sidebar-item"><a class="sidebar-anchor" href="./index.html#swaplist">SWAP LIST</a></li>
         <li class="sidebar-item"><a class="sidebar-anchor" href="friends_list.html">FRIENDS LIST</a></li>
