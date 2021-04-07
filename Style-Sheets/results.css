@@ -14,26 +14,81 @@
 
 .center {
   text-align: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 
 }
 
+.bookHeader{
+  font-size: 10wv;
+}
 
 @media (min-width: 950px) {
-    .search-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .input {
-      width: 40vw;
-    }
+  .search-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  /* small-laptop / tablet view / mobile view */
-  @media (max-width: 949px) {
-    .search-area {
-      display: none;
-    }
+  .input {
+    width: 40vw;
   }
+}
+
+
+/* small-laptop / tablet view */
+@media (max-width: 949px) and (min-width: 480px) {
+  .search-area {
+    display: none;
+  }
+  .bookImg {
+    width: 80%;
+  }
+}
+
+
+/* mobile view */
+@media (max-width: 479px) and (min-width: 380px) {
+  .search-area {
+    display: none;
+  }
+  .bookHeader {
+    font-size: 3vw;
+  }
+  .bookCategory {
+    font-size: 3vw;
+  }
+  .bookDescription {
+    font-size: 3vw;
+  }
+  .bookRating {
+    font-size: 3vw;
+  } 
+  .bookImg {
+    width: 120%;
+  }
+}
+
+@media (max-width: 379px) {
+  .search-area {
+    display: none;
+  }
+  .bookHeader {
+    font-size: 3vw;
+  }
+  .bookCategory {
+    font-size: 3vw;
+  }
+  .bookDescription {
+    font-size: 3vw;
+  }
+  .bookRating {
+    font-size: 3vw;
+  } 
+  .bookImg {
+    width: 100%;
+  }
+}
 
   

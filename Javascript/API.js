@@ -26,7 +26,7 @@ function printResults(searchedBook) {
 
 
                 const resultCardEl = document.createElement("div");
-                resultCardEl.setAttribute("class", "ui card fluid");
+                resultCardEl.setAttribute("class", "ui card fluid container");
                 
 
                 const topBtns = document.createElement("div");
@@ -46,7 +46,7 @@ function printResults(searchedBook) {
                 bookInfoEl.setAttribute("class", "ui grid content");
 
                 const imgEl = document.createElement("div");
-                imgEl.setAttribute("class", "two wide column center")
+                imgEl.setAttribute("class", "six wide column center")
                 bookInfoEl.appendChild(imgEl);
 
                 var imgTrueOrFalse = data.items[i].volumeInfo.imageLinks;
@@ -54,8 +54,9 @@ function printResults(searchedBook) {
                     const bookImg = document.createElement("img");
                     bookImg.setAttribute("src", data.items[i].volumeInfo.imageLinks.thumbnail);
                     bookImg.setAttribute("alt", data.items[i].volumeInfo.description);
-                    bookImg.setAttribute("class", "center");
-                    /* bookImg.setAttribute("width", "100vw"); */
+                    bookImg.setAttribute("class", "center bookImg");
+                    bookImg.setAttribute("width", "100%");
+                    bookImg.style.alignContent = "center";
                     imgEl.appendChild(bookImg);
                 } else {
                     const noBookImg = document.createElement("div");
@@ -64,11 +65,11 @@ function printResults(searchedBook) {
                 }
 
                 const content = document.createElement("div");
-                content.setAttribute("class", "fourteen wide column");
+                content.setAttribute("class", "ten wide column");
                 bookInfoEl.appendChild(content);
 
                 const bookTitle = document.createElement("h1");
-                bookTitle.setAttribute("class", "ui header")
+                bookTitle.setAttribute("class", "ui bookHeader black")
                 bookTitle.innerHTML = data.items[i].volumeInfo.title;
                 content.appendChild(bookTitle);
                 
@@ -76,12 +77,12 @@ function printResults(searchedBook) {
                 
                 if(categoryTrueOrFalse != undefined) {
                     const bookCategory = document.createElement("h2");
-                    bookCategory.setAttribute("class", "ui medium header");
+                    bookCategory.setAttribute("class", "ui bookCategory black");
                     bookCategory.innerHTML = data.items[i].volumeInfo.categories[0];
                     content.appendChild(bookCategory); 
                 } else {
                     const noBookCategory = document.createElement("h2");
-                    noBookCategory.setAttribute("class", "ui medium header");
+                    noBookCategory.setAttribute("class", "ui bookCategory black");
                     noBookCategory.innerHTML = "No category available";
                     content.appendChild(noBookCategory); 
                 }
@@ -89,10 +90,16 @@ function printResults(searchedBook) {
                 var descriptionTrueOrFalse = data.items[i].volumeInfo.description;
                 if(descriptionTrueOrFalse != undefined){
                     const descriptionEl = document.createElement("p");
+                    descriptionEl.setAttribute("class", "bookDescription");
+                    descriptionEl.style.maxHeight ="150px";
+                    descriptionEl.style.overflow ="hidden";
                     descriptionEl.textContent = data.items[i].volumeInfo.description;
                     content.appendChild(descriptionEl); 
                 } else {
                     const noDescriptionEl = document.createElement("p");
+                    noDescriptionEl.setAttribute("class", "bookDescription");
+                    noDescriptionEl.style.maxHeight ="150px";
+                    noDescriptionEl.style.overflow ="hidden";
                     noDescriptionEl.textContent = "No description available";
                     content.appendChild(noDescriptionEl); 
                 }
@@ -102,12 +109,12 @@ function printResults(searchedBook) {
                 if(averageRatingTrueOrFalse != undefined) {
                     const ratingEl = document.createElement("p");
                     ratingEl.textContent = "Average rating:" + data.items[i].volumeInfo.averageRating + "/5";
-                    ratingEl.setAttribute("class", "black")
+                    ratingEl.setAttribute("class", "black bookRating")
                     content.appendChild(ratingEl);
                 } else {
                     const noRatingEl = document.createElement("p");
                     noRatingEl.textContent = "No rating available";
-                    noRatingEl.setAttribute("class", "black")
+                    noRatingEl.setAttribute("class", "black bookRating")
                     content.appendChild(noRatingEl);
                 }
                 const bottomBtn = document.createElement("div");

@@ -19,7 +19,7 @@ var formSubmitHandler = function() {
 };
 
 var bookSearch = function(searchedBook) {
-    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=3" + "&key=" + APIKey;
+    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=15" + "&key=" + APIKey;
     fetch(requestUrl)
         .then(function(response) {
             if(response.ok) {
@@ -34,19 +34,7 @@ var bookSearch = function(searchedBook) {
         });
 };
 
-function bookSearch(searchedBook) {
-    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=3" + "&key=" + APIKey;
-    fetch(requestUrl)
-        .then(function(response){
-            
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-            console.log(data.items);
-            pageRedirect();
-        })    
-}
+
 
 function pageRedirect() {
     redirectEl.setAttribute('href', './results.html');
