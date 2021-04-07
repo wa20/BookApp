@@ -82,13 +82,73 @@
 }
 
 /* ==============================================
--  results page buttons
+-  card contents
 ============================================== */
 
-  .wishlistButton {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+/* laptop view */
+@media (min-width: 950px) {
+  .bookHeader{
     color: rgba(239, 130, 84);
-    z-index: 1;
+    font-size: 2.5rem;
   }
+
+  .bookCategory {
+    color: rgba(239, 130, 84);
+    font-size: 2.2rem;
+  }
+  .bookRating{
+    color: rgb(255, 218, 56);
+    font-size: 1.9rem;
+  }
+
+  .bookRating2{
+    color: rgb(104, 104, 104);
+    font-size: 1.9rem;
+  }
+
+}
+
+
+/* small-laptop / tablet view */
+@media (max-width: 949px) and (min-width: 480px) {
+  .bookHeader{
+    color: rgba(239, 130, 84);
+    font-size: 2.0rem;
+  }
+  .bookCategory {
+    color: rgba(239, 130, 84);
+    font-size: 1.7rem;
+  }
+
+  .bookRating{
+    color: rgb(255, 218, 56);
+    font-size: 1.5rem;
+  }
+
+  .bookRating2{
+    color: rgb(104, 104, 104);
+    font-size: 1.5rem;
+  }
+}
+
+
+  /* mobile view */
+  @media (max-width: 479px) {
+  .bookHeader {
+    color: rgba(239, 130, 84);
+    font-size: 1.5rem;
+  }
+  .bookCategory {
+    color: rgba(239, 130, 84);
+    font-size: 1.2rem;
+  }
+  .bookRating{
+    color: rgb(255, 218, 56);
+    font-size: 1.0rem;
+  }
+
+  .bookRating2{
+    color: rgb(104, 104, 104);
+    font-size: 1.0rem;
+  }
+}

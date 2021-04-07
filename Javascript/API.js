@@ -26,7 +26,7 @@ function printResults(searchedBook) {
 
                 // container
                 const resultCardEl = document.createElement("div");
-                resultCardEl.setAttribute("class", "ui inverted card fluid container");
+                resultCardEl.setAttribute("class", "ui inverted segment card fluid container");
                 
                 // top buttons
                 const topBtns = document.createElement("div");
@@ -75,7 +75,7 @@ function printResults(searchedBook) {
 
                 //book title
                 const bookTitle = document.createElement("h1");
-                bookTitle.setAttribute("class", "ui bookHeader black")
+                bookTitle.setAttribute("class", "ui bookHeader orange")
                 bookTitle.innerHTML = data.items[i].volumeInfo.title;
                 content.appendChild(bookTitle);
                 
@@ -114,21 +114,20 @@ function printResults(searchedBook) {
                 /* console.log(averageRatingTrueOrFalse); */
                 if(averageRatingTrueOrFalse != undefined) {
                     const ratingEl = document.createElement("p");
-                    ratingEl.textContent = "Average rating:" + data.items[i].volumeInfo.averageRating + "/5";
+                    ratingEl.textContent = "Average rating:  " + data.items[i].volumeInfo.averageRating + "/5";
                     ratingEl.setAttribute("class", "black bookRating")
                     content.appendChild(ratingEl);
                 } else {
                     const noRatingEl = document.createElement("p");
                     noRatingEl.textContent = "No rating available";
-                    noRatingEl.setAttribute("class", "black bookRating")
+                    noRatingEl.setAttribute("class", "black bookRating2")
                     content.appendChild(noRatingEl);
                 }
 
                 //buttom button
                 const bottomBtn = document.createElement("div");
-                bottomBtn.setAttribute("class", "ui inverted fluid one bottom attached basic buttons");
+                bottomBtn.setAttribute("class", "ui inverted segment fluid one bottom attached buttons");
 
-                //ui inverted card fluid container
   
                 if(data.items[i].saleInfo.isEbook){
                     const purchaseLink = document.createElement("a");
@@ -142,7 +141,7 @@ function printResults(searchedBook) {
                     const purchaseLink = document.createElement("a");
 
                     purchaseLink.textContent = "No purchase link available";
-                    purchaseLink.setAttribute("class", "ui inverted red button ui button huge purchaseLinkButton");
+                    purchaseLink.setAttribute("class", "ui inverted grey button ui button huge purchaseLinkButton");
                     bottomBtn.appendChild(purchaseLink);
                 }
                 
