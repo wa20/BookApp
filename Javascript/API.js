@@ -1,5 +1,9 @@
 var searchEl = document.getElementById("search-bar");
 var searchBtnEl = document.getElementById("search-btn");
+
+var resultsSearchEl = document.getElementById("search-bar-results");
+var resultsSearchBtnEl = document.getElementById("search-btn-results");
+
 var resultEl = document.getElementById("main-body");
 var resultHeaderEl = document.getElementById("results-header");
 
@@ -15,7 +19,7 @@ function printResults(searchedBook) {
   var requestUrl =
     "https://www.googleapis.com/books/v1/volumes?q=" +
     searchedBook +
-    "&maxResults=15" +
+    "&maxResults=5" +
     "&key=" +
     APIKey;
   fetch(requestUrl)
@@ -231,9 +235,17 @@ function printResults(searchedBook) {
 
 printResults(searchedBook);
 
-searchBtnEl.addEventListener("click", function () {
+searchBtnEl.addEventListener("click", function() {
   console.log("hi");
   const searchedBook = searchEl.value;
 
   printResults(searchedBook);
 });
+
+resultsSearchBtnEl.addEventListener("click", function(){
+  resultEl.innerHTML = "";
+  const searchedBook = resultsSearchEl.value;
+
+  printResults(searchedBook);
+});
+
