@@ -5,21 +5,15 @@ var resultHeaderEl = document.getElementById("results-header");
 
 var searchedBook = JSON.parse(localStorage.getItem("input"));
 
-var wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
-/* console.log(typeof searchedBook);
-
-console.log(resultEl);
-console.log(searchEl);
-console.log(resultHeaderEl);
- */
+var wishlist = JSON.parse(localStorage.getItem("wishlistBookInfo")) || [];
+var library = JSON.parse(localStorage.getItem("libraryBookInfo")) || [];
 
 
 const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 
 function printResults(searchedBook) {
     resultHeaderEl.textContent = "Search results for: " + searchedBook;
-    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=3" + "&key=" + APIKey;
+    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=15" + "&key=" + APIKey;
     fetch(requestUrl)
         .then(function(response){
             /* console.log(response);
@@ -45,7 +39,7 @@ function printResults(searchedBook) {
 
                 const LibraryBtn = document.createElement("div");
                 LibraryBtn.innerHTML = "Add to library";
-                LibraryBtn.setAttribute("class", "ui green button");
+                LibraryBtn.setAttribute("class", "ui green button libraryButton");
                 topBtns.appendChild(LibraryBtn);
                 
                 const bookInfoEl = document.createElement("div");
@@ -119,11 +113,24 @@ function printResults(searchedBook) {
                 const bottomBtn = document.createElement("div");
                 bottomBtn.setAttribute("class", "ui one bottom attached basic buttons");
 
-                const purchaseLink = document.createElement("div");
-                purchaseLink.innerHTML = "Purchase Link";
-                purchaseLink.setAttribute("class", "ui button");
-                bottomBtn.appendChild(purchaseLink);
 
+  
+                if(data.items[i].saleInfo.isEbook){
+                    const purchaseLink = document.createElement("a");
+
+                    purchaseLink.textContent = "Purchase Link";
+                    purchaseLink.setAttribute("class", "ui button purchaseLinkButton");
+                    console.log(data.items[i].saleInfo.buyLink)
+                    /* purchaseLink.setAttribute('href', "data.items[i].saleInfo.buyLink"); */
+                    bottomBtn.appendChild(purchaseLink);
+                } else {
+                    const purchaseLink = document.createElement("a");
+
+                    purchaseLink.textContent = "No purchase link available";
+                    purchaseLink.setAttribute("class", "ui button purchaseLinkButton");
+                    bottomBtn.appendChild(purchaseLink);
+                }
+                
                 resultCardEl.appendChild(topBtns);
                 resultCardEl.appendChild(bookInfoEl);
                 resultCardEl.appendChild(bottomBtn);
@@ -132,14 +139,37 @@ function printResults(searchedBook) {
                 
 
             }
+
             var wishlistButtons = document.querySelectorAll(".wishlistButton")
             console.log(wishlistButtons);
             wishlistButtons.forEach(element => {
                 element.addEventListener("click", function(event){
-                    clickIndex = (Array.from(wishlistButtons).indexOf(event.target));
-                    console.log("Clicked on: " + clickIndex);
-                    wishlist.push(data.items[clickIndex].volumeInfo);
-                    localStorage.setItem("bookTitle", JSON.stringify(wishlist))
+                    clickIndex1 = (Array.from(wishlistButtons).indexOf(event.target));
+                    console.log("Clicked on: " + clickIndex1);
+                    wishlist.push(data.items[clickIndex1].volumeInfo);
+                    localStorage.setItem("wishlistBookInfo", JSON.stringify(wishlist))
+                })
+            })
+
+            var libraryButtons = document.querySelectorAll(".libraryButton")
+            console.log(libraryButtons);
+            libraryButtons.forEach(element => {
+                element.addEventListener("click", function(event){
+                    clickIndex2 = (Array.from(libraryButtons).indexOf(event.target));
+                    console.log("Clicked on: " + clickIndex2);
+                    library.push(data.items[clickIndex2].volumeInfo);
+                    localStorage.setItem("libraryBookInfo", JSON.stringify(library));
+                })
+            })
+
+            var purchaseLinkButtons = document.querySelectorAll(".purchaseLinkButton")
+            purchaseLinkButtons.forEach(element => {
+                element.addEventListener("click", function(event){
+                    clickIndex3 = (Array.from(purchaseLinkButtons).indexOf(event.target));
+                    console.log("Clicked on: " + clickIndex3);
+                    var purchaseUrl = data.items[clickIndex3].saleInfo.buyLink;
+                    var newWindow = window.open(purchaseUrl, "_blank");
+                    newWindow.focus();
                 })
             })
         })
