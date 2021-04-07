@@ -1,6 +1,10 @@
 const searchBtnEl = document.getElementById("search-btn");
 const searchEl = document.getElementById("search-bar");
-const redirectEl = document.getElementById("redirectEl");
+const redirectEl = document.getElementById("redirectEl"); 
+
+const searchBtnNavEl = document.getElementById("search-btn-nav");
+const searchNavEl = document.getElementById("search-bar-nav");
+const redirectNavEl = document.getElementById("redirectNavEl"); 
 
 /* console.log(searchBtnEl);
 console.log(searchEl); */
@@ -18,6 +22,17 @@ var formSubmitHandler = function() {
     }
 };
 
+var formSubmitHandlerNav = function() {
+    /*     event.preventDefault(); */
+        var userInput = searchNavEl.value;
+        localStorage.setItem("input", JSON.stringify(userInput))
+        if (userInput) {
+            bookSearchNav(userInput);
+        } else {
+            alert("Please enter a book");
+        }
+    };
+
 var bookSearch = function(searchedBook) {
     var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=15" + "&key=" + APIKey;
     fetch(requestUrl)
@@ -34,7 +49,21 @@ var bookSearch = function(searchedBook) {
         });
 };
 
-
+var bookSearchNav = function(searchedBook) {
+    var requestUrl = "https://www.googleapis.com/books/v1/volumes?q=" + searchedBook + "&maxResults=15" + "&key=" + APIKey;
+    fetch(requestUrl)
+        .then(function(response) {
+            if(response.ok) {
+                console.log(response);
+                response.json().then(function(data) {
+                    console.log(data);
+                    pageRedirectNav();    
+                });
+            } else {
+                alert('Error: ' + response.statusText)
+            }
+        });
+};
 
 function pageRedirect() {
     redirectEl.setAttribute('href', './results.html');
@@ -43,11 +72,23 @@ function pageRedirect() {
     console.log(redirectEl);  
 }
 
+function pageRedirectNav() {
+    redirectNavEl.setAttribute('href', './results.html');
+    console.log(searchBtnNavEl);   
+    console.log(redirectNavEl);  
+}
+
+
 searchBtnEl.addEventListener("click", function(){
     console.log("hi");
     formSubmitHandler();
 });
 
-
+searchBtnNavEl.addEventListener("click", function(){
+    console.log("hi");
+    searchBtnNavEl.classList.remove("search");
+    searchBtnNavEl.setAttribute("class", "arrow right icon");
+    formSubmitHandlerNav();
+})
 
 
