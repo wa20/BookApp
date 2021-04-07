@@ -13,7 +13,7 @@
     background: #1f222e;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
   }
 }
 
@@ -29,7 +29,7 @@
     background: #2d3142;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
   }
 }
 
@@ -45,7 +45,7 @@
     background: #2D3142;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     color:  rgba(239, 130, 84, 0.899);
   }
 }

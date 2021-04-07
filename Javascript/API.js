@@ -24,27 +24,31 @@ function printResults(searchedBook) {
             console.log(data)
             for(var i = 0; i < data.items.length; i++){
 
-
+                // container
                 const resultCardEl = document.createElement("div");
-                resultCardEl.setAttribute("class", "ui card fluid container");
+                resultCardEl.setAttribute("class", "ui inverted card fluid container");
                 
-
+                // top buttons
                 const topBtns = document.createElement("div");
-                topBtns.setAttribute("class", "ui two top attached basic buttons");
+                topBtns.setAttribute("class", "ui inverted segment two top attached buttons");
 
+                // button for wishlist
                 const wishlistBtn = document.createElement("div");
                 wishlistBtn.innerHTML = "Add to wishlist";
-                wishlistBtn.setAttribute("class", "ui green button wishlistButton")
+                wishlistBtn.setAttribute("class", "ui inverted green button ui button huge wishlistButton")
                 topBtns.appendChild(wishlistBtn);
 
+                // button for library
                 const LibraryBtn = document.createElement("div");
                 LibraryBtn.innerHTML = "Add to library";
-                LibraryBtn.setAttribute("class", "ui green button libraryButton");
+                LibraryBtn.setAttribute("class", "ui inverted green button ui button huge libraryButton");
                 topBtns.appendChild(LibraryBtn);
                 
+                //container minus the buttons
                 const bookInfoEl = document.createElement("div");
                 bookInfoEl.setAttribute("class", "ui grid content");
 
+                //book image
                 const imgEl = document.createElement("div");
                 imgEl.setAttribute("class", "six wide column center")
                 bookInfoEl.appendChild(imgEl);
@@ -63,11 +67,13 @@ function printResults(searchedBook) {
                     noBookImg.innerHTML = "No img available";
                     imgEl.appendChild(noBookImg);
                 }
+                
 
                 const content = document.createElement("div");
                 content.setAttribute("class", "ten wide column");
                 bookInfoEl.appendChild(content);
 
+                //book title
                 const bookTitle = document.createElement("h1");
                 bookTitle.setAttribute("class", "ui bookHeader black")
                 bookTitle.innerHTML = data.items[i].volumeInfo.title;
@@ -117,16 +123,18 @@ function printResults(searchedBook) {
                     noRatingEl.setAttribute("class", "black bookRating")
                     content.appendChild(noRatingEl);
                 }
+
+                //buttom button
                 const bottomBtn = document.createElement("div");
-                bottomBtn.setAttribute("class", "ui one bottom attached basic buttons");
+                bottomBtn.setAttribute("class", "ui inverted fluid one bottom attached basic buttons");
 
-
+                //ui inverted card fluid container
   
                 if(data.items[i].saleInfo.isEbook){
                     const purchaseLink = document.createElement("a");
-
+                    //purchase button
                     purchaseLink.textContent = "Purchase Link";
-                    purchaseLink.setAttribute("class", "ui button purchaseLinkButton");
+                    purchaseLink.setAttribute("class", "ui inverted green button ui button huge purchaseLinkButton");
                     console.log(data.items[i].saleInfo.buyLink)
                     /* purchaseLink.setAttribute('href', "data.items[i].saleInfo.buyLink"); */
                     bottomBtn.appendChild(purchaseLink);
@@ -134,7 +142,7 @@ function printResults(searchedBook) {
                     const purchaseLink = document.createElement("a");
 
                     purchaseLink.textContent = "No purchase link available";
-                    purchaseLink.setAttribute("class", "ui button purchaseLinkButton");
+                    purchaseLink.setAttribute("class", "ui inverted red button ui button huge purchaseLinkButton");
                     bottomBtn.appendChild(purchaseLink);
                 }
                 
