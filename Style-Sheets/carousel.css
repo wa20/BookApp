@@ -3,7 +3,7 @@
     min-height: 70vh;
     background: #2D3142;
     ;
-    padding: 1rem;
+    padding: 3.0vw;
 }
 
 /* ==============================================
@@ -55,6 +55,7 @@
 .library-cover, .wishlist-cover, .swaplist-cover {
     height: 100%;
 }
+
 
 .library-cover:hover, .wishlist-cover:hover, .swaplist-cover:hover {
     transform: scale(1.2);
