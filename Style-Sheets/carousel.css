@@ -52,6 +52,10 @@
     border-radius: 5px;
 }
 
-.book-cover {
+.library-cover, .wishlist-cover, .swaplist-cover {
     height: 100%;
+}
+
+.library-cover:hover, .wishlist-cover:hover, .swaplist-cover:hover {
+    transform: scale(1.2);
 }
