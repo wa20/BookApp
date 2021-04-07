@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap links below -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css" /> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  <!-- Carousel -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- CSS Style sheets below -->
+  <link rel="stylesheet" href="./background.css" />
+  <link rel="stylesheet" href="./Style-Sheets/footer.css" />
+  <link rel="stylesheet" href="./Style-Sheets/hero-header.css" />
+  <link rel="stylesheet" href="./Style-Sheets/nav-header.css" />
+  <link rel="stylesheet" href="./Style-Sheets/Slideout.css" />
+  <link rel="stylesheet" href="./Style-Sheets/carousel.css" />
+  <!-- <link rel="stylesheet" href="./style.css"> -->
+  <title>BookApp</title>
+</head>
+
+<body>
+  <nav class="nav-right visible-xs">
+    <div class="burgerBtn" id="burgerBtn">
+      <div class="bar top"></div>
+      <div class="bar middle"></div>
+      <div class="bar bottom"></div>
+    </div>
+  </nav>
+  <!-- burger nav-right above main body -->
+
+  <main class="mainBody">
+
+    <header class="fixed-navbar">
+      <div class="logo">BookAPP</div>
+
+      <nav class="navbar-options">
+        <ul class="ui secondary menu">
+          <li class="menuItem"><a class="item ui orange  sub header" href="#">LIBRARY</a></li>
+          <li class="menuItem"><a class="item ui orange  sub header" href="#">WISH LIST</a></li>
+          <li class="menuItem"><a class="item ui orange  sub header" href="#">SWAP LIST</a></li>
+          <li class="menuItem"><a class="item ui orange  sub header" href="#">FRIENDS LIST</a></li>
+        </ul>
+      </nav>
+      <!--  -->
+      <div class="nav-right hidden-xs">
+        <div class="burgerBtn" id="burgerBtn">
+          <div class="bar top"></div>
+          <div class="bar middle"></div>
+          <div class="bar bottom"></div>
+        </div>
+      </div>
+      <!-- nav-right -->
+    </header>
+
+    <section class="hero">
+
+      <!-- search space and button -->
+      <div class="search-area">
+        <a class="ui fluid action input huge" id="redirectEl">
+          <input class="huge" type="text" placeholder="Friends Name/List..." id="search-bar">
+          <button class="ui button searchBtn red huge" id="search-btn">Search</button>
+        </a>
+      </div>
+
+
+
+    </section>
+
+    <!-- container where all friends books and content will live -->
+    <section id="main-body" class="main-body">
+      <section class="friends_list1 carousel">
+        <div class="swiper-container">
+          <h1 class="carousel-header">friends_name1</h1>
+          <div class="swiper-wrapper" id="friend1-list-cover">
+
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+          <!-- Add Arrows -->
+          <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> -->
+        </div>
+
+      </section>
+
+      <section class="friends_list2 carousel">
+        <div class="swiper-container">
+          <h1 class="carousel-header">friends_name2</h1>
+          <div class="swiper-wrapper" id="friend2-list-cover">
+            <!-- <div class="swiper-slide">Book 1</div> -->
+          </div>
+      </section>
+
+      <!-- Modal -->
+      <div class="ui modal">
+        <i class="close icon"></i>
+        <div id="modal-title" class="header">
+          Book Title
+        </div>
+        <div class="image content">
+          <div id="modal-image" class="image">
+            <!-- <img class="image" src="./Assets/book-covers/1984.jpg" alt=""> -->
+          </div>
+          <div id="modal-description" class="description">
+            Book description
+          </div>
+        </div>
+        <div class="actions">
+          <div id="modal-remove-btn" class="ui red deny button">Remove from collection</div>
+          <div id="modal-swap-btn" class="ui positive button">Add to swap list</div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- <section class="">
+</section> -->
+  </main>
+
+  <section class="sidebar side-hidden">
+    <nav class="sidebar-list">
+      <ul class="side-menu">
+        <li class="sidebar-item">
+          <div class="slidebar-search">
+            <a class="ui action input" id="redirectNavEl">
+              <input class="huge" type="text" placeholder="Search..." id="search-bar-nav">
+              <button class="ui icon button red huge">
+                <i class="search icon" id="search-btn-nav"></i>
+              </button>
+            </a>
+          </div>
+        </li>
+        <li class="sidebar-item"><a class="sidebar-anchor" href="#">Library</a></li>
+        <li class="sidebar-item"><a class="sidebar-anchor" href="#">Wish List</a></li>
+        <li class="sidebar-item"><a class="sidebar-anchor" href="#">Swap List</a></li>
+        <li class="sidebar-item"><a class="sidebar-anchor" href="#">Friends List</a></li>
+      </ul>
+    </nav>
+  </section>
+
+
+
+  <footer class="page-footer">
+
+
+  </footer>
+
+
+  <!-- external JQUERY sources -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+  <!-- linked JS script files -->
+  <script src="./Javascript/burger-bar.js"></script>
+  <script src="./Javascript/carousel.js"></script>
+  <script src="./Javascript/pageRedirect.js"></script>
+  <!-- <script src="./Javascript/API.js"></script> -->
+</body>
+
+</html>
