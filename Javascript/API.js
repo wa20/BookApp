@@ -27,14 +27,14 @@ function printResults(searchedBook) {
     .then(function (data) {
       console.log(data);
       for (var i = 0; i < data.items.length; i++) {
-        // container
+        // results container
         const resultCardEl = document.createElement("div");
         resultCardEl.setAttribute(
           "class",
           "ui inverted segment card fluid container"
         );
 
-        // top buttons
+        // top buttons add to library and add to wishlist
         const topBtns = document.createElement("div");
         topBtns.setAttribute(
           "class",
@@ -71,10 +71,7 @@ function printResults(searchedBook) {
         var imgTrueOrFalse = data.items[i].volumeInfo.imageLinks;
         if (imgTrueOrFalse != undefined) {
           const bookImg = document.createElement("img");
-          bookImg.setAttribute(
-            "src",
-            data.items[i].volumeInfo.imageLinks.thumbnail
-          );
+          bookImg.setAttribute("src",data.items[i].volumeInfo.imageLinks.thumbnail);
           bookImg.setAttribute("alt", data.items[i].volumeInfo.description);
           bookImg.setAttribute("class", "center bookImg");
           bookImg.setAttribute("width", "100%");
@@ -82,7 +79,8 @@ function printResults(searchedBook) {
           imgEl.appendChild(bookImg);
         } else {
           const noBookImg = document.createElement("div");
-          noBookImg.innerHTML = "No img available";
+          noBookImg.setAttribute("class", "ui placeholder 4:3")
+        //   noBookImg.innerHTML = "No img available";
           imgEl.appendChild(noBookImg);
         }
 
@@ -173,9 +171,7 @@ function printResults(searchedBook) {
           //purchase button
           purchaseLink.textContent = "Purchase Link";
           purchaseLink.setAttribute(
-            "class",
-            "ui inverted red button ui button huge purchaseLinkButton"
-          );
+            "class", "ui inverted red button ui button huge purchaseLinkButton");
           console.log(data.items[i].saleInfo.buyLink);
           /* purchaseLink.setAttribute('href', "data.items[i].saleInfo.buyLink"); */
           bottomBtn.appendChild(purchaseLink);
