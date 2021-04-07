@@ -40,9 +40,9 @@ let swiper = new Swiper('.swiper-container', {
 /* Render Main Content */
 
 let libraryArray = JSON.parse(localStorage.getItem("libraryBookInfo"));
-
+let libraryArrayLength = libraryArray.length;
 let wishlistArray = JSON.parse(localStorage.getItem("wishlistBookInfo"));
-
+let wishlistArrayLength = wishlistArray.length;
 let swaplistArray = JSON.parse(localStorage.getItem("swaplistBookInfo"));
 
 
@@ -50,7 +50,7 @@ let swaplistArray = JSON.parse(localStorage.getItem("swaplistBookInfo"));
 //clear elements first for when remove button is triggered. 
 
 if ((libraryArray !== null) && libraryArrayLength > 0) {
-    let libraryArrayLength = libraryArray.length;
+
     for (let i = 0; i < libraryArrayLength; i++) {
 
         let bookCover = document.createElement("img");
@@ -79,7 +79,7 @@ else {
 
 // Render wishlist
 if (wishlistArray !== null && wishlistArrayLength > 0) {
-    let wishlistArrayLength = wishlistArray.length;
+
 
     for (let i = 0; i < wishlistArrayLength; i++) {
 
@@ -129,6 +129,7 @@ libraryBookCoverEls.forEach(book => {
             //close modal to prevent remove button being clicked again
             let element = document.getElementById("library-book-cover");
             element.removeChild(element.children[clickIndex]);
+            libraryBookCoverEls = document.querySelectorAll(".library-cover");
             //clickIndex--;
         }
 
@@ -163,6 +164,9 @@ wishlistBookCoverEls.forEach(book => {
             localStorage.setItem("wishlistBookInfo", JSON.stringify(wishlistArray));
             console.log("book removed at index " + clickIndex);
             //close modal to prevent remove button being clicked again;
+            let element = document.getElementById("wishlist-book-cover");
+            element.removeChild(element.children[clickIndex]);
+            wishlistBookCoverEls = document.querySelectorAll(".wishlist-cover");
         }
     })
 
