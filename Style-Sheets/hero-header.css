@@ -11,7 +11,7 @@
   align-items: center;
   background: transparent;
   width: 100vw;
-  height: 60vh;
+  height: 50vh;
   margin-top: 10rem;
   }
 }
@@ -60,7 +60,7 @@
     
   }
   #search-bar {
-    width: 80vw;
+    width: 65vw;
   }
   /* .result-search{
     display: none;
@@ -73,8 +73,8 @@
     display: none;
   }
 
-  .input {
-    width:70vw;
+  #search-bar {
+    width:60vw;
   }
 
   .slidebar-seach{
@@ -84,6 +84,9 @@
 }
 }
 
+/* ==============================================
+- Search button
+============================================== */
 
 
 
