@@ -1,5 +1,6 @@
 # BookApp
 
+Do you find yourself hoarding shelves of unwanted books? DO you wish you could swap books you would like for books you no longer use? 
 
 BookApp is an application which gives users the ability to create their own virtual book store using the old  books that they no longer need. The app incooperates a lot of features such as a dynamic navigation header, search bar and carousel which makes it very user friendly for all audiences. 
 
