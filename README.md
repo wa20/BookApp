@@ -42,9 +42,17 @@ BookApp is an application which gives users the ability to create their own virt
 BookApp was created using purpose driven tech stack choices. All of the tools used contribute the elegant aesthetics, smooth interactability and efficiency. 
 
 ```
-- HTML 5
-- CSS3: Flexbox and Stylesheets inspired from; "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css", "https://unpkg.com/swiper/swiper-bundle.min.css"
-- JavaScript: JQUERY, AJAX libaries inspired from; "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js", "https://unpkg.com/swiper/swiper-bundle.min.js", https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+1. HTML 5
+2. CSS3:
+ Flexbox and Stylesheets inspired from;
+- "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+- "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"\
+- "https://unpkg.com/swiper/swiper-bundle.min.css"
+3. JavaScript:
+ JQUERY, AJAX libaries inspired from; 
+ - "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"
+- "https://unpkg.com/swiper/swiper-bundle.min.js"
+- "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
 ```
 
 ## Contributors
