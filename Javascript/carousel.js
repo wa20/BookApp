@@ -173,6 +173,7 @@ function updateModalLists() {
     updateWishlistModal();
     updateSwaplistModal();
 
+
 }
 
 let clickIndex;
@@ -251,6 +252,7 @@ function updateWishlistModal() {
         <h3>Description:</h3>${wishlistArray[clickIndex].description}
         `;
 
+
             $('.ui.modal')
                 .modal('show');
 
@@ -290,6 +292,7 @@ function updateWishlistModal() {
             console.log("Hovered over: " + hoverIndex);
 
         })
+
     })
 };
 

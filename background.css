@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,11 @@
 ol,
 ul {
   list-style: none;
+}
+
+
+.logo{
+  font-family:'Gloria Hallelujah', cursive;
 }
 
 /* laptop view */
