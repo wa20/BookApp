@@ -58,6 +58,7 @@ BookApp was created using purpose driven tech stack choices. All of the tools us
 ## Contributors
 
 
-* [@scottydocs](https://github.com/scottydocs) 📖
-* [@cainwatson](https://github.com/cainwatson) 🐛
-* [@calchuchesta](https://github.com/calchuchesta) 🐛
+* [@Wa20](https://github.com/wa20)
+* [@ByteMyBits](https://github.com/ByteMyBits)
+* [@freddieb12345](https://github.com/freddieb12345)
+* [@Allan-Ngwenya](https://github.com/Allan-Ngwenya)
