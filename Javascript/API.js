@@ -1,6 +1,9 @@
 var searchEl = document.getElementById("search-bar");
 var searchBtnEl = document.getElementById("search-btn");
 
+
+
+
 var resultsSearchEl = document.getElementById("search-bar-results");
 var resultsSearchBtnEl = document.getElementById("search-btn-results");
 
@@ -8,7 +11,7 @@ var resultEl = document.getElementById("main-body");
 var resultHeaderEl = document.getElementById("results-header");
 
 var searchedBook = JSON.parse(localStorage.getItem("input"));
-var dropdownSelection = JSON.parse(localStorage.getItem("dropdown"));
+
 
 var wishlist = JSON.parse(localStorage.getItem("wishlistBookInfo")) || [];
 var library = JSON.parse(localStorage.getItem("libraryBookInfo")) || [];
@@ -17,7 +20,7 @@ const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 
 function printResults(searchedBook) {
   resultHeaderEl.textContent = "Search results for: " + searchedBook;
-  
+  var dropdownSelection = JSON.parse(localStorage.getItem("dropdown"));
   if(dropdownSelection === "all") {
     var requestUrl =
       "https://www.googleapis.com/books/v1/volumes?q=" +
@@ -285,15 +288,14 @@ function printResults(searchedBook) {
 
 printResults(searchedBook);
 
-searchBtnEl.addEventListener("click", function() {
-  console.log("hi");
-  const searchedBook = searchEl.value;
-
-  printResults(searchedBook);
-});
-
 resultsSearchBtnEl.addEventListener("click", function(){
   resultEl.innerHTML = "";
+
+  var dropdownResultsEL = document.getElementById("dropdown-results-el");
+  var selectedOption = dropdownResultsEL.options[dropdownResultsEL.selectedIndex].value;
+  localStorage.setItem("dropdown", JSON.stringify(selectedOption))
+  console.log(selectedOption);
+
   const searchedBook = resultsSearchEl.value;
 
   printResults(searchedBook);
