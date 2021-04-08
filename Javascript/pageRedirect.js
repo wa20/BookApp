@@ -16,6 +16,7 @@ const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 var formSubmitHandler = function() {
     var userInput = searchEl.value;
     localStorage.setItem("input", JSON.stringify(userInput))
+    
     var dropdownEL = document.getElementById("dropdown");
     var selectedOption = dropdownEL.options[dropdownEL.selectedIndex].value;
     localStorage.setItem("dropdown", JSON.stringify(selectedOption))
@@ -30,6 +31,7 @@ var formSubmitHandler = function() {
 var formSubmitHandlerNav = function() {
         var userInput = searchNavEl.value;
         localStorage.setItem("input", JSON.stringify(userInput))
+
         var dropdownNavEL = document.getElementById("dropdownNav");
         var selectedOption = dropdownNavEL.options[dropdownNavEL.selectedIndex].value;
         localStorage.setItem("dropdown", JSON.stringify(selectedOption))
