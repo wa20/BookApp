@@ -10,7 +10,7 @@ BookApp is an application which gives users the ability to create their own virt
 
 Linux and macOS:
 ```
-![Screenshot](Assets/Readme_images/948FCED6-45C1-402A-B438-C9A92B36918F.jpeg)
+![Alt text](Assets/Readme_images/C8CBFA29-DCE1-4FC7-874F-A7DD9F9E4BDE.jpeg "Title")
 ```
 
 Windows:
