@@ -1,7 +1,7 @@
 
 
 /* ==============================================
-- Search Area
+- background for hero area
 ============================================== */
 /* laptop view */
 @media (min-width: 950px) {
@@ -59,12 +59,12 @@
     align-items: center;
     
   }
-  .input {
-    width: 40vw;
+  #search-bar {
+    width: 80vw;
   }
-  .result-search{
+  /* .result-search{
     display: none;
-  }
+  } */
 }
 
 /* small-laptop / tablet view / mobile view */
@@ -74,7 +74,7 @@
   }
 
   .input {
-    width:75vw;
+    width:70vw;
   }
 
   .slidebar-seach{
@@ -86,17 +86,18 @@
 
 
 
+
 .searchOps{
   padding: 1rem;
 }
 
-@media (min-width: 950px) {
+/* @media (min-width: 950px) { */
 .fa-search{
   font-size: 2rem;
 }
-}
-@media (max-width: 949px) {
+/* } */
+/* @media (max-width: 949px) {
   .fa-search{
-    font-size: 1.0rem;
+    font-size: 1.5rem;
   }
-  }
+  } */
