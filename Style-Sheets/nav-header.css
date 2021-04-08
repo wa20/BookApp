@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+body{
+  font-family:'Gloria Hallelujah', cursive;
+}
+
+
+
+
 /* laptop view */
 
 @media (min-width: 950px) {
@@ -10,8 +19,8 @@
     min-height: 5vh;
     /* box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322); */
     height: auto;
-    background: #1f222e;
-    position: fixed;
+    background: #2d3142;
+    /* position: fixed; */
     top: 0;
     z-index: 3;
   }
@@ -27,7 +36,7 @@
     width: 100vw;
     min-height: 5vh;
     background: #2d3142;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     z-index: 3;
   }
@@ -43,7 +52,7 @@
     width: 100vw;
     height: 12vh;
     background: #2D3142;
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     z-index: 3;
     color:  rgba(239, 130, 84, 0.899);

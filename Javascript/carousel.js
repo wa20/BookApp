@@ -119,8 +119,9 @@ libraryBookCoverEls.forEach(book => {
         <h3>Description:</h3>${libraryArray[clickIndex].description}
         `;
 
-        $('.ui.modal')
-        .modal('show');
+        $('.ui.basic.modal')
+  .modal('show')
+;
 
         document.getElementById("modal-remove-btn").onclick = function () {
 
@@ -157,8 +158,9 @@ wishlistBookCoverEls.forEach(book => {
         <h3>Description:</h3>${wishlistArray[clickIndex].description}
         `;
 
-        $('.ui.modal')
-            .modal('show');
+        $('.ui.basic.modal')
+        .modal('show')
+      ;
 
         document.getElementById("modal-remove-btn").onclick = function () {
 
