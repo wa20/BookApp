@@ -15,9 +15,11 @@ ul {
 }
 
 
-a.logo{
+a.logo, .tag-line{
   font-family:'Gloria Hallelujah', cursive;
 }
+
+
 
 /* html{
   all:unset
