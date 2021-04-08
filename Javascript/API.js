@@ -17,6 +17,7 @@ const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 
 function printResults(searchedBook) {
   resultHeaderEl.textContent = "Search results for: " + searchedBook;
+  
   if(dropdownSelection === "all") {
     var requestUrl =
       "https://www.googleapis.com/books/v1/volumes?q=" +
