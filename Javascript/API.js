@@ -1,9 +1,6 @@
 var searchEl = document.getElementById("search-bar");
 var searchBtnEl = document.getElementById("search-btn");
 
-
-
-
 var resultsSearchEl = document.getElementById("search-bar-results");
 var resultsSearchBtnEl = document.getElementById("search-btn-results");
 
@@ -11,7 +8,6 @@ var resultEl = document.getElementById("main-body");
 var resultHeaderEl = document.getElementById("results-header");
 
 var searchedBook = JSON.parse(localStorage.getItem("input"));
-
 
 var wishlist = JSON.parse(localStorage.getItem("wishlistBookInfo")) || [];
 var library = JSON.parse(localStorage.getItem("libraryBookInfo")) || [];
@@ -21,48 +17,46 @@ const APIKey = "AIzaSyC2xEWKYLtmXP4EC1KSovcnRSpX9h3NSTs";
 function printResults(searchedBook) {
   resultHeaderEl.textContent = "Search results for: " + searchedBook;
   var dropdownSelection = JSON.parse(localStorage.getItem("dropdown"));
-  if(dropdownSelection === "all") {
+  if (dropdownSelection === "all") {
     var requestUrl =
       "https://www.googleapis.com/books/v1/volumes?q=" +
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  } else if (dropdownSelection === "title") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+intitle:" +
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  } else if (dropdownSelection === "author") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+inauthor:" +
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  } else if (dropdownSelection === "ISBN") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+isbn:" +
+      searchedBook +
+      "&maxResults=5" +
+      "&key=" +
+      APIKey;
+  } else if (dropdownSelection === "category") {
+    var requestUrl =
+      "https://www.googleapis.com/books/v1/volumes?q=" +
+      "+subject:" +
       searchedBook +
       "&maxResults=5" +
       "&key=" +
       APIKey;
   }
-  else if(dropdownSelection === "title"){
-    var requestUrl =
-      "https://www.googleapis.com/books/v1/volumes?q=" +
-      "+intitle:" + 
-      searchedBook +
-      "&maxResults=5" +
-      "&key=" +
-      APIKey;
-  } else if(dropdownSelection === "author") {
-    var requestUrl =
-      "https://www.googleapis.com/books/v1/volumes?q=" +
-      "+inauthor:" + 
-      searchedBook +
-      "&maxResults=5" +
-      "&key=" +
-      APIKey;
-  } else if(dropdownSelection === "ISBN") {
-    var requestUrl =
-      "https://www.googleapis.com/books/v1/volumes?q=" +
-      "+isbn:" + 
-      searchedBook +
-      "&maxResults=5" +
-      "&key=" +
-      APIKey;
-  } else if(dropdownSelection === "category") {
-    var requestUrl =
-      "https://www.googleapis.com/books/v1/volumes?q=" +
-      "+subject:" + 
-      searchedBook +
-      "&maxResults=5" +
-      "&key=" +
-      APIKey;
-  }
-        
 
   fetch(requestUrl)
     .then(function (response) {
@@ -99,10 +93,7 @@ function printResults(searchedBook) {
         // button for library
         const LibraryBtn = document.createElement("div");
         LibraryBtn.innerHTML = "Add to library";
-        LibraryBtn.setAttribute(
-          "class",
-          "ui inverted green button ui button huge libraryButton"
-        );
+        LibraryBtn.setAttribute("class","ui inverted green button ui button huge libraryButton");
         topBtns.appendChild(LibraryBtn);
 
         //container minus the buttons
@@ -117,7 +108,10 @@ function printResults(searchedBook) {
         var imgTrueOrFalse = data.items[i].volumeInfo.imageLinks;
         if (imgTrueOrFalse != undefined) {
           const bookImg = document.createElement("img");
-          bookImg.setAttribute("src",data.items[i].volumeInfo.imageLinks.thumbnail);
+          bookImg.setAttribute(
+            "src",
+            data.items[i].volumeInfo.imageLinks.thumbnail
+          );
           bookImg.setAttribute("alt", data.items[i].volumeInfo.description);
           bookImg.setAttribute("class", "center bookImg");
           bookImg.setAttribute("width", "100%");
@@ -125,8 +119,8 @@ function printResults(searchedBook) {
           imgEl.appendChild(bookImg);
         } else {
           const noBookImg = document.createElement("div");
-          noBookImg.setAttribute("class", "ui placeholder 4:3")
-        //   noBookImg.innerHTML = "No img available";
+          noBookImg.setAttribute("class", "ui placeholder 4:3");
+          //   noBookImg.innerHTML = "No img available";
           imgEl.appendChild(noBookImg);
         }
 
@@ -161,7 +155,8 @@ function printResults(searchedBook) {
         if (categoryTrueOrFalse != undefined) {
           const bookCategory = document.createElement("h3");
           bookCategory.setAttribute("class", "ui bookCategory black");
-          bookCategory.innerHTML = "Category: " + data.items[i].volumeInfo.categories[0];
+          bookCategory.innerHTML =
+            "Category: " + data.items[i].volumeInfo.categories[0];
           content.appendChild(bookCategory);
         } else {
           const noBookCategory = document.createElement("h3");
@@ -217,7 +212,9 @@ function printResults(searchedBook) {
           //purchase button
           purchaseLink.textContent = "Purchase Link";
           purchaseLink.setAttribute(
-            "class", "ui inverted red button ui button huge purchaseLinkButton");
+            "class",
+            "ui inverted red button ui button huge purchaseLinkButton"
+          );
           console.log(data.items[i].saleInfo.buyLink);
           /* purchaseLink.setAttribute('href', "data.items[i].saleInfo.buyLink"); */
           bottomBtn.appendChild(purchaseLink);
@@ -245,12 +242,12 @@ function printResults(searchedBook) {
         element.addEventListener("click", function (event) {
           clickIndex1 = Array.from(wishlistButtons).indexOf(event.target);
           console.log("Clicked on: " + clickIndex1);
-          console.log(wishlist)
-          if(wishlist.includes(data.items[clickIndex1].volumeInfo) === false) {
-          wishlist.push(data.items[clickIndex1].volumeInfo);
-          localStorage.setItem("wishlistBookInfo", JSON.stringify(wishlist));
-          } else{
-              //modal saying already on wishlist
+          console.log(wishlist);
+          if (wishlist.includes(data.items[clickIndex1].volumeInfo) === false) {
+            wishlist.push(data.items[clickIndex1].volumeInfo);
+            localStorage.setItem("wishlistBookInfo", JSON.stringify(wishlist));
+          } else {
+            //modal saying already on wishlist
           }
         });
       });
@@ -261,13 +258,12 @@ function printResults(searchedBook) {
         element.addEventListener("click", function (event) {
           clickIndex2 = Array.from(libraryButtons).indexOf(event.target);
           console.log("Clicked on: " + clickIndex2);
-          if(library.includes(data.items[clickIndex2].volumeInfo) === false){
-          library.push(data.items[clickIndex2].volumeInfo)
-          localStorage.setItem("libraryBookInfo", JSON.stringify(library));
+          if (library.includes(data.items[clickIndex2].volumeInfo) === false) {
+            library.push(data.items[clickIndex2].volumeInfo);
+            localStorage.setItem("libraryBookInfo", JSON.stringify(library));
           } else {
-              //modal saying already saved to library
+            //modal saying already saved to library
           }
-
         });
       });
 
@@ -288,16 +284,16 @@ function printResults(searchedBook) {
 
 printResults(searchedBook);
 
-resultsSearchBtnEl.addEventListener("click", function(){
+resultsSearchBtnEl.addEventListener("click", function () {
   resultEl.innerHTML = "";
 
   var dropdownResultsEL = document.getElementById("dropdown-results-el");
-  var selectedOption = dropdownResultsEL.options[dropdownResultsEL.selectedIndex].value;
-  localStorage.setItem("dropdown", JSON.stringify(selectedOption))
+  var selectedOption =
+    dropdownResultsEL.options[dropdownResultsEL.selectedIndex].value;
+  localStorage.setItem("dropdown", JSON.stringify(selectedOption));
   console.log(selectedOption);
 
   const searchedBook = resultsSearchEl.value;
 
   printResults(searchedBook);
 });
-
