@@ -37,19 +37,18 @@ BookApp is an application which gives users the ability to create their own virt
 ![Alt text](Assets/Readme_images/DA9527A8-BC86-4E24-8565-A1A4BA1025C4.jpeg "Friends Book List")
 
 
-## Using <project_name>
+## Technology Stack Used to Create BookApp
 
-To use <project_name>, follow these steps:
+BookApp was created using purpose driven tech stack choices. All of the tools used contribute the elegant aesthetics, smooth interactability and efficiency. 
 
 ```
-<usage_example>
+- HTML 5
+- CSS3: Flexbox and Stylesheets inspired from; "https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css", "https://unpkg.com/swiper/swiper-bundle.min.css"
+- JavaScript: JQUERY, AJAX libaries inspired from; "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js", "https://unpkg.com/swiper/swiper-bundle.min.js", https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
 ```
-
-Add run commands and examples you think users will find useful. Provide an options reference for bonus points!
 
 ## Contributors
 
-Thanks to the following people who have contributed to this project:
 
 * [@scottydocs](https://github.com/scottydocs) 📖
 * [@cainwatson](https://github.com/cainwatson) 🐛
