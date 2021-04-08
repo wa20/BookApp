@@ -115,11 +115,12 @@ libraryBookCoverEls.forEach(book => {
         document.getElementById("modal-title").textContent = libraryArray[clickIndex].title;
         document.getElementById("modal-description").innerHTML = `
         <h3>Author:</h3>${libraryArray[clickIndex].authors}
+        <h3>Category:</h3>${libraryArray[clickIndex].categories}
         <h3>Description:</h3>${libraryArray[clickIndex].description}
         `;
 
         $('.ui.modal')
-            .modal('show');
+        .modal('show');
 
         document.getElementById("modal-remove-btn").onclick = function () {
 
@@ -152,6 +153,7 @@ wishlistBookCoverEls.forEach(book => {
         document.getElementById("modal-title").textContent = wishlistArray[clickIndex].title;
         document.getElementById("modal-description").innerHTML = `
         <h3>Author:</h3>${wishlistArray[clickIndex].authors}
+        <h3>Category:</h3>${libraryArray[clickIndex].categories}
         <h3>Description:</h3>${wishlistArray[clickIndex].description}
         `;
 
