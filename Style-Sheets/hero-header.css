@@ -5,8 +5,9 @@
 ============================================== */
 /* laptop view */
 @media (min-width: 950px) {
-.hero {
+section.hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: transparent;
@@ -19,8 +20,9 @@
 
 /* small-laptop / tablet view */
 @media (max-width: 949px) and (min-width: 480px) {
-.hero {
+section.hero {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: transparent;
@@ -33,8 +35,9 @@
 
 /* mobile view */
 @media (max-width: 479px) {
-  .hero {
+  section.hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: transparent;
@@ -52,6 +55,8 @@
 - Search Area
 ============================================== */
 
+
+
 @media (min-width: 950px) {
   .search-area {
     display: flex;
@@ -59,12 +64,6 @@
     align-items: center;
     
   }
-  #search-bar {
-    width: 65vw;
-  }
-  /* .result-search{
-    display: none;
-  } */
 }
 
 /* small-laptop / tablet view / mobile view */
@@ -77,11 +76,22 @@
     width:60vw;
   }
 
-  .slidebar-seach{
-
-  margin: 1rem;
-
 }
+
+/* ==============================================
+- 
+============================================== */
+
+
+#search-bar {
+  width: 65vw;
+}
+
+.result-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 /* ==============================================
@@ -90,17 +100,50 @@
 
 
 
-.searchOps{
-  padding: 1rem;
-}
-
-/* @media (min-width: 950px) { */
+@media (min-width: 950px) {
 .fa-search{
   font-size: 2rem;
 }
-/* } */
-/* @media (max-width: 949px) {
+}
+@media (max-width: 949px) {
   .fa-search{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
-  } */
+  }
+
+/* ==============================================
+- Tag - line
+============================================== */
+
+  .tag-line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 6rem;
+    
+  }
+
+
+  .tag-line-results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4rem;
+    
+  }
+
+
+.tag {
+    font-family:'Gloria Hallelujah', cursive;
+    color: white;
+    font-size: 4.5vw;
+  
+}
+
+
+.tag-results {
+  font-family:'Gloria Hallelujah', cursive;
+  color: white;
+  font-size: 4.5vw;
+
+}
