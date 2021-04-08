@@ -59,13 +59,16 @@
 
       <!-- search space and button -->
       <div class="search-area">
-        <a class="ui fluid action input huge" id="redirectEl">
-          <input class="huge" type="text" placeholder="Friends Name/List..." id="search-bar">
-          <button class="ui button searchBtn red huge" id="search-btn">Search</button>
+        <a class="ui fluid action input massive" id="redirectEl">
+          <input class="huge" type="text" placeholder="Search..." id="search-bar">
+          <select class="ui compact selection dropdown" id="dropdown">
+            <option selected="" value="all">All</option>
+            <option value="title">Friends Name</option>
+            <option value="author">Friends List</option>
+          </select>
+          <button class="ui button searchBtn red" id="search-btn"><i class="fas fa-search"></i></button>
         </a>
       </div>
-
-
 
     </section>
 

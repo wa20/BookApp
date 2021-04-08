@@ -12,9 +12,12 @@
     /* box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.322); */
     height: auto;
     background: #2d3142;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 3;
+  }
+  .content-area {
+    padding-top: 5vh;
   }
 }
 
@@ -28,9 +31,12 @@
     width: 100vw;
     min-height: 5vh;
     background: #2d3142;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 3;
+  }
+  .content-area {
+    padding-top: 5vh;
   }
 }
 
@@ -44,10 +50,13 @@
     width: 100vw;
     height: 12vh;
     background: #2D3142;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 3;
     color:  rgba(239, 130, 84, 0.899);
+  }
+  .content-area {
+    padding-top: 12vh;
   }
 }
 

@@ -238,14 +238,20 @@ function printResults(searchedBook) {
         resultEl.appendChild(resultCardEl);
       }
 
+      // wishlist event listener
       var wishlistButtons = document.querySelectorAll(".wishlistButton");
       console.log(wishlistButtons);
       wishlistButtons.forEach((element) => {
         element.addEventListener("click", function (event) {
           clickIndex1 = Array.from(wishlistButtons).indexOf(event.target);
           console.log("Clicked on: " + clickIndex1);
+          console.log(wishlist)
+          if(wishlist.includes(data.items[clickIndex1].volumeInfo) === false) {
           wishlist.push(data.items[clickIndex1].volumeInfo);
           localStorage.setItem("wishlistBookInfo", JSON.stringify(wishlist));
+          } else{
+              //modal saying already on wishlist
+          }
         });
       });
 
@@ -255,8 +261,13 @@ function printResults(searchedBook) {
         element.addEventListener("click", function (event) {
           clickIndex2 = Array.from(libraryButtons).indexOf(event.target);
           console.log("Clicked on: " + clickIndex2);
-          library.push(data.items[clickIndex2].volumeInfo);
+          if(library.includes(data.items[clickIndex2].volumeInfo) === false){
+          library.push(data.items[clickIndex2].volumeInfo)
           localStorage.setItem("libraryBookInfo", JSON.stringify(library));
+          } else {
+              //modal saying already saved to library
+          }
+
         });
       });
 
