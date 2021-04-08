@@ -9,9 +9,9 @@ BookApp is an application which gives users the ability to create their own virt
  follow the flow below to start swapping your old books and finding your new books:
 
 Linux and macOS:
-```
+
 ![Alt text](Assets/Readme_images/C8CBFA29-DCE1-4FC7-874F-A7DD9F9E4BDE.jpeg "Title")
-```
+
 
 Windows:
 ```
