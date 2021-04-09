@@ -11,13 +11,13 @@ BookApp is an application which gives users the ability to create their own virt
 
 1. The home page. Here you can search for a book that you would like to add to your wishlist or own library. The search capability is versatile as it allows users to search by author, book title, ISBN or catagory.
 
-<img src="./Assets/screen-shots/homepage.png" width="350"/> [Homepage]<img src="./Assets/screen-shots/homepage-mobile.png" width="150"/>[Homepage mobile]
+<img src="./Assets/screen-shots/homepage.png" width="400"/> [Homepage]<img src="./Assets/screen-shots/homepage-mobile.png" width="150"/>[Homepage mobile]
 
                          
 
 2. You will be presented with a list of all the relevant results, which are fetched from the 'GoogleBooks API' ( https://developers.google.com/books). As you can see below, every search result will give you the option of 'Add to Wishlist', 'Add to Library' and 'Purchase Link'. 
 
-<img src="./Assets/screen-shots/results-page.png" width="350"/> [Search Results] <img src="./Assets/screen-shots/results-page-mobile.png" width="150"/> [search-Result-Mobile]
+<img src="./Assets/screen-shots/results-page.png" width="400"/> [Search Results] <img src="./Assets/screen-shots/results-page-mobile.png" width="150"/> [search-Result-Mobile]
                            
 
 3. To view the books you have added to you Library or Wish list, you can navigate using the hyperlinks on the header or alternatively using the slide-out menu, which also adds to ease of use on mobile. 
@@ -27,7 +27,7 @@ BookApp is an application which gives users the ability to create their own virt
 
 4. Once you are happy with which books you have added to your Libary and Wish List, you can view them in the same page and naviagte through them quickly using the click and drag carousel feature. 
 
-<img src="./Assets/screen-shots/carousel.png" width="350"/> [View of Library and wish list]<img src="./Assets/screen-shots/carousel-modal.png" width="300"/> [View of Library Modal]
+<img src="./Assets/screen-shots/carousel.png" width="400"/> [View of Library and wish list]<img src="./Assets/screen-shots/carousel-modal.png" width="400"/> [View of Library Modal]
                             
 
 5. Finally to add your friends list of books that you would like to swap for, navigate to 'Friends List' where you will be given the option to enter your friends name and then their list of Books. 
