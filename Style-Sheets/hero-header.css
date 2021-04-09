@@ -78,14 +78,27 @@ section.hero {
 
 }
 
-/* ==============================================
-- 
-============================================== */
-
-
 #search-bar {
   width: 65vw;
 }
+
+/* ==============================================
+-  results
+============================================== */
+
+@media (min-width: 950px) {
+.result-search-input {
+  width: 65vw;
+}
+}
+
+/* small-laptop / tablet view / mobile view */
+@media (max-width: 949px) {
+  .result-search-input {
+  width: 55vw;
+  }
+}
+
 
 .result-search {
   display: flex;
