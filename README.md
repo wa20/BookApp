@@ -1,6 +1,6 @@
 # BookApp
 
-Do you find yourself hoarding shelves of unwanted books? DO you wish you could swap books you would like for books you no longer use? 
+Do you find yourself hoarding shelves of unwanted books? Do you wish you could swap books you would like for books you no longer use? 
 
 BookApp is an application which gives users the ability to create their own virtual book store using the old  books that they no longer need. The app incooperates a lot of features such as a dynamic navigation header, search bar and carousel which makes it very user friendly for all audiences. 
 
@@ -40,7 +40,7 @@ BookApp is an application which gives users the ability to create their own virt
 
 ## Technology Stack Used to Create BookApp
 
-BookApp was created using purpose driven tech stack choices. All of the tools used contribute the elegant aesthetics, smooth interactability and efficiency. 
+BookApp was created using purpose driven tech stack choices. All of the tools used contribute to the elegant aesthetics, smooth interactability and efficiency of the app.
 
 ```
 1. HTML 5
@@ -63,3 +63,4 @@ BookApp was created using purpose driven tech stack choices. All of the tools us
 * [@ByteMyBits](https://github.com/ByteMyBits)
 * [@freddieb12345](https://github.com/freddieb12345)
 * [@Allan-Ngwenya](https://github.com/Allan-Ngwenya)
+
