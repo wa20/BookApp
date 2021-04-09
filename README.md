@@ -13,7 +13,7 @@ BookApp is an application which gives users the ability to create their own virt
 
 <img src="./Assets/screen-shots/homepage.png" width="250"/> ("Homepage")
 
-<img src="./Assets/screen-shots/homepage-mobile.png" width="250"/>("Search Results mobile")
+<img src="./Assets/screen-shots/homepage-mobile.png" width="150"/>("Homepage mobile")
 
                             ↓
                             ↓
@@ -22,15 +22,15 @@ BookApp is an application which gives users the ability to create their own virt
 
 <img src="./Assets/screen-shots/results-page.png" width="250"/> ("Search Results")
 
-<img src="./Assets/screen-shots/results-page-mobile.png" width="250"/> ("Homepage-Mobile")
+<img src="./Assets/screen-shots/results-page-mobile.png" width="150"/> ("search-Result-Mobile")
                             ↓
                             ↓
 
 3. To view the books you have added to you Library or Wish list, you can navigate using the hyperlinks on the header or alternatively using the slide-out menu, which also adds to ease of use on mobile. 
 
-<img src="./Assets/screen-shots/slideout-homepage.png" width="250"/> ("Slide-Out menu")
+<img src="./Assets/screen-shots/slideout-homepage.png" width="150"/> ("Slide-Out menu")
 
-<img src="./Assets/screen-shots/slideout-navigation-results page.png" width="250"/> ("Slide-Out menu")
+<img src="./Assets/screen-shots/slideout-navigation-results page.png" width="150"/> ("Slide-Out menu")
                             ↓
                             ↓
 
