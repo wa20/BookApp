@@ -11,25 +11,34 @@ BookApp is an application which gives users the ability to create their own virt
 
 1. The home page. Here you can search for a book that you would like to add to your wishlist or own library. The search capability is versatile as it allows users to search by author, book title, ISBN or catagory.
 
-![Alt text](Assets/Readme_images/C8CBFA29-DCE1-4FC7-874F-A7DD9F9E4BDE.jpeg "Homepage")
+![Alt text] <img src="./Assets/screen-shots/homepage.png" width="300"/> ("Homepage")
+
+![Alt text] <img src="./Assets/screen-shots/homepage-mobile.png" width="300"/>("Search Results mobile")
+
                             ↓
                             ↓
 
 2. You will be presented with a list of all the relevant results, which are fetched from the 'GoogleBooks API' ( https://developers.google.com/books). As you can see below, every search result will give you the option of 'Add to Wishlist', 'Add to Library' and 'Purchase Link'. 
 
-![Alt text](Assets/Readme_images/BD20F1B3-C440-479F-85A7-A10B97EE179C.jpeg "Search Results")
+![Alt text] <img src="./Assets/screen-shots/results-page.png" width="300"/> ("Search Results")
+
+![Alt text] <img src="./Assets/screen-shots/results-page-mobile.png" width="300"/> ("Homepage-Mobile")
                             ↓
                             ↓
 
 3. To view the books you have added to you Library or Wish list, you can navigate using the hyperlinks on the header or alternatively using the slide-out menu, which also adds to ease of use on mobile. 
 
-![Alt text](Assets/Readme_images/948FCED6-45C1-402A-B438-C9A92B36918F.jpeg "Slide-Out menu")
+![Alt text]<img src="./Assets/screen-shots/slideout-homepage.png" width="300"/> ("Slide-Out menu")
+
+![Alt text]<img src="./Assets/screen-shots/slideout-navigation-results page.png" width="300"/> ("Slide-Out menu")
                             ↓
                             ↓
 
 4. Once you are happy with which books you have added to your Libary and Wish List, you can view them in the same page and naviagte through them quickly using the click and drag carousel feature. 
 
-![Alt text](Assets/Readme_images/F8D99093-B148-431F-8E96-FF96B99556BC.jpeg "View of Library and wish list")
+![Alt text] <img src="./Assets/screen-shots/carousel.png" width="300"/>  ("View of Library and wish list")
+
+![Alt text]  <img src="./Assets/screen-shots/carousel-modal.png" width="300"/> ("View of Library Modal")
                             ↓
                             ↓
 

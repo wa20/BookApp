@@ -25,6 +25,7 @@ var formSubmitHandler = function() {
         pageRedirect(userInput);
     } else {
         alert("Please enter a book");
+        
     }
 };
 
