@@ -95,7 +95,7 @@ section.hero {
 /* small-laptop / tablet view / mobile view */
 @media (max-width: 949px) {
   .result-search-input {
-  width: 55vw;
+  width: 50vw;
   }
 }
 
