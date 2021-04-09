@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./Assets/favicon.png" type="image/png">
   <!-- Bootstrap links below -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
@@ -34,7 +35,7 @@
   <main class="mainBody">
 
     <header class="fixed-navbar">
-      <a class="logo" href ="./index.html#hero">BookAPP</a>
+      <a class="logo" href="./index.html#hero">BookAPP</a>
 
 
       <nav class="navbar-options">
@@ -56,94 +57,94 @@
       </div>
       <!-- nav-right -->
     </header>
-<div class="content-area">
-    
-    <section class="hero" id="hero">
+    <div class="content-area">
 
-      <div class="tag-line">
-        <div class="tag">Store, Swap, Buy with the BookAPP</div>
-      </div>
+      <section class="hero" id="hero">
 
-      <!-- search space and button -->
-      <div class="search-area">
-        <a class="ui action input massive" id="redirectEl">
-          <input class="huge" type="text" placeholder="Search..." id="search-bar">
-          <select class="ui compact selection dropdown" id="dropdown">
-            <option selected="" value="all">All</option>
-            <option value="title">Title</option>
-            <option value="author">Author</option>
-            <option value="ISBN">ISBN</option>
-            <option value="category">Category</option>
-          </select>
-          <button class="ui button searchBtn red" id="search-btn"><i class="fas fa-search"></i></button>
-        </a>
-      </div>
+        <div class="tag-line">
+          <div class="tag">Store, Swap, Buy with the BookAPP</div>
+        </div>
 
-
+        <!-- search space and button -->
+        <div class="search-area">
+          <a class="ui action input massive" id="redirectEl">
+            <input class="huge" type="text" placeholder="Search..." id="search-bar">
+            <select class="ui compact selection dropdown" id="dropdown">
+              <option selected="" value="all">All</option>
+              <option value="title">Title</option>
+              <option value="author">Author</option>
+              <option value="ISBN">ISBN</option>
+              <option value="category">Category</option>
+            </select>
+            <button class="ui button searchBtn red" id="search-btn"><i class="fas fa-search"></i></button>
+          </a>
+        </div>
 
 
 
-    </section>
 
-    <!-- main container where all books and content will live -->
-    <section id="main-body" class="main-body">
-      <section class="library carousel" id="library">
 
-        <div class="swiper-container" >
-          <h1 class="ui horizontal divider header orange carousel-header">LIBRARY</h1>
+      </section>
 
-          <div class="swiper-wrapper" id="library-book-cover">
+      <!-- main container where all books and content will live -->
+      <section id="main-body" class="main-body">
+        <section class="library carousel" id="library">
 
-          </div>
-          <!-- <div class="swiper-pagination"></div> -->
-          <!-- Add Arrows -->
-          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-container">
+            <h1 class="ui horizontal divider header orange carousel-header">LIBRARY</h1>
+
+            <div class="swiper-wrapper" id="library-book-cover">
+
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+            <!-- Add Arrows -->
+            <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div> -->
+          </div>
+
+        </section>
+
+        <section class="wish-list carousel">
+          <div class="swiper-container" id="wishlist">
+            <h1 class="ui horizontal divider header orange carousel-header">WISH LIST</h1>
+            <div class="swiper-wrapper" id="wishlist-book-cover">
+              <!-- <div class="swiper-slide">Book 1</div> -->
+            </div>
+        </section>
+
+        <section class="swap-list carousel">
+          <div class="swiper-container" id="swaplist">
+
+            <h1 class="ui horizontal divider header orange carousel-header">SWAP LIST</h1>
+            <div class="swiper-wrapper" id="swaplist-book-cover">
+
+              <!-- <div class="swiper-slide">Book 1</div> -->
+            </div>
+        </section>
+
+
+        <!-- Modal -->
+        <div class="ui basic modal">
+          <i class="close icon"></i>
+          <div id="modal-title" class="header">
+            Book Title
+          </div>
+          <div class="image content">
+            <div id="modal-image" class="image">
+              <!-- <img class="image" src="./Assets/book-covers/1984.jpg" alt=""> -->
+            </div>
+            <div id="modal-description" class="description">
+              Book description
+            </div>
+          </div>
+          <div class="actions">
+            <div id="modal-remove-btn" class="ui red deny button">Remove from collection</div>
+            <div id="modal-swap-btn" class="ui positive button">Add to swap list</div>
+          </div>
         </div>
 
       </section>
-
-      <section class="wish-list carousel">
-        <div class="swiper-container" id="wishlist">
-          <h1 class="ui horizontal divider header orange carousel-header">WISH LIST</h1>
-          <div class="swiper-wrapper" id="wishlist-book-cover">
-            <!-- <div class="swiper-slide">Book 1</div> -->
-          </div>
-      </section>
-
-      <section class="swap-list carousel">
-        <div class="swiper-container" id="swaplist">
-
-          <h1 class="ui horizontal divider header orange carousel-header">SWAP LIST</h1>
-          <div class="swiper-wrapper" id="swaplist-book-cover">
-
-            <!-- <div class="swiper-slide">Book 1</div> -->
-          </div>
-      </section>
-
-
-      <!-- Modal -->
-      <div class="ui basic modal">
-        <i class="close icon"></i>
-        <div id="modal-title" class="header">
-          Book Title
-        </div>
-        <div class="image content">
-          <div id="modal-image" class="image">
-            <!-- <img class="image" src="./Assets/book-covers/1984.jpg" alt=""> -->
-          </div>
-          <div id="modal-description" class="description">
-            Book description
-          </div>
-        </div>
-        <div class="actions">
-          <div id="modal-remove-btn" class="ui red deny button">Remove from collection</div>
-          <div id="modal-swap-btn" class="ui positive button">Add to swap list</div>
-        </div>
-      </div>
-
-    </section>
-  </div>
+    </div>
     <!-- <section class="">
 </section> -->
   </main>
