@@ -19,10 +19,10 @@ var formSubmitHandler = function() {
     
     var dropdownEL = document.getElementById("dropdown");
     var selectedOption = dropdownEL.options[dropdownEL.selectedIndex].value;
-    localStorage.setItem("dropdown", JSON.stringify(selectedOption))
+    localStorage.setItem("dropdown", JSON.stringify(selectedOption));
     console.log(typeof selectedOption);
     if (userInput) {
-        pageRedirect(userInput);
+        pgeRedirect(userInpaut);
     } else {
         alert("Please enter a book");
     }
@@ -34,7 +34,7 @@ var formSubmitHandlerNav = function() {
 
         var dropdownNavEL = document.getElementById("dropdownNav");
         var selectedOption = dropdownNavEL.options[dropdownNavEL.selectedIndex].value;
-        localStorage.setItem("dropdown", JSON.stringify(selectedOption))
+        localStorage.setItem("dropdown", JSON.stringify(selectedOption));
         console.log(typeof selectedOption);
         if (userInput) {
             pageRedirectNav(userInput);
