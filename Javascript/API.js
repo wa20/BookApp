@@ -247,7 +247,12 @@ function printResults(searchedBook) {
             wishlist.push(data.items[clickIndex1].volumeInfo);
             localStorage.setItem("wishlistBookInfo", JSON.stringify(wishlist));
           } else {
-            //modal saying already on wishlist
+            wishlistButtons[clickIndex1].innerHTML = "Added to wishlist";
+            wishlistButtons[clickIndex1].setAttribute(
+                "class",
+                "ui  inverted grey button ui disabled button huge purchaseLinkButton"
+              );
+            
           }
         });
       });
@@ -262,7 +267,11 @@ function printResults(searchedBook) {
             library.push(data.items[clickIndex2].volumeInfo);
             localStorage.setItem("libraryBookInfo", JSON.stringify(library));
           } else {
-            //modal saying already saved to library
+            libraryButtons[clickIndex2].innerHTML = "Added to library";
+            libraryButtons[clickIndex2].setAttribute(
+                "class",
+                "ui  inverted grey button ui disabled button huge purchaseLinkButton"
+              );
           }
         });
       });

@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./Assets/favicon.png" type="image/png">
   <!-- Bootstrap links below -->
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css" /> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
@@ -57,18 +58,24 @@
 
     <section class="hero">
 
-      <!-- search space and button -->
-      <div class="search-area">
-        <a class="ui fluid action input massive" id="redirectEl">
-          <input class="huge" type="text" placeholder="Search..." id="search-bar">
-          <select class="ui compact selection dropdown" id="dropdown">
-            <option selected="" value="all">All</option>
-            <option value="title">Friends Name</option>
-            <option value="author">Friends List</option>
-          </select>
-          <button class="ui button searchBtn red" id="search-btn"><i class="fas fa-search"></i></button>
-        </a>
+      <div class="tag-line-results">
+        <div class="tag-results">Store, Swap, Buy with the BookAPP</div>
       </div>
+     
+       <!-- search space and button with icon, used in smaller space screen -->
+    <div class="result-search"> 
+      <a class="ui action input huge" id="redirectEl">
+        <input class="result-search-input" type="text" placeholder="Search..." id="search-bar-results">
+        <select class="ui compact selection" id="dropdown-results-el">
+          <option selected="" value="all">All</option>
+          <option value="title">Title</option>
+          <option value="author">Author</option>
+          <option value="ISBN">ISBN</option>
+          <option value="category">Category</option>
+        </select>
+        <button class="ui button searchBtn red" id="search-btn-results"><i class="fas fa-search"></i></button>
+      </a>
+    </div> 
 
     </section>
 
