@@ -30,7 +30,7 @@ a.logo{
 /* laptop view */
 @media (min-width: 480px) {
   body {
-    background-image: url(./Assets/4907599.jpg);
+    background-image: url('./Assets/4907599.jpg');
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -46,7 +46,7 @@ a.logo{
   body {
     display: flex;
     flex-direction: column;
-    background-image: url(./Assets/4907599.jpg);
+    background-image: url('./Assets/4907599.jpg');
     background-size: cover;
     background-position: center;
     min-height: 100vh;
