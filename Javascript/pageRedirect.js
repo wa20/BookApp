@@ -24,7 +24,9 @@ var formSubmitHandler = function() {
     if (userInput) {
         pageRedirect(userInput);
     } else {
-        alert("Please enter a book");
+        searchEl.setAttribute("placeholder", "");
+        
+        searchEl.setAttribute("placeholder", "Please enter a book title, author name, category or ISBN number...");
         
     }
 };
