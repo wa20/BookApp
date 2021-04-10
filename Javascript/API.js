@@ -21,7 +21,7 @@ function printResults(searchedBook) {
     var requestUrl =
       "https://www.googleapis.com/books/v1/volumes?q=" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "title") {
@@ -29,7 +29,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+intitle:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "author") {
@@ -37,7 +37,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+inauthor:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "ISBN") {
@@ -45,7 +45,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+isbn:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "category") {
@@ -53,7 +53,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+subject:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   }
