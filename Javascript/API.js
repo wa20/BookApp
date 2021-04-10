@@ -21,7 +21,7 @@ function printResults(searchedBook) {
     var requestUrl =
       "https://www.googleapis.com/books/v1/volumes?q=" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "title") {
@@ -29,7 +29,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+intitle:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "author") {
@@ -37,7 +37,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+inauthor:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "ISBN") {
@@ -45,7 +45,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+isbn:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   } else if (dropdownSelection === "category") {
@@ -53,7 +53,7 @@ function printResults(searchedBook) {
       "https://www.googleapis.com/books/v1/volumes?q=" +
       "+subject:" +
       searchedBook +
-      "&maxResults=5" +
+      "&maxResults=15" +
       "&key=" +
       APIKey;
   }
@@ -247,7 +247,12 @@ function printResults(searchedBook) {
             wishlist.push(data.items[clickIndex1].volumeInfo);
             localStorage.setItem("wishlistBookInfo", JSON.stringify(wishlist));
           } else {
-            //modal saying already on wishlist
+            wishlistButtons[clickIndex1].innerHTML = "Added to wishlist";
+            wishlistButtons[clickIndex1].setAttribute(
+                "class",
+                "ui  inverted grey button ui disabled button huge purchaseLinkButton"
+              );
+            
           }
         });
       });
@@ -262,7 +267,11 @@ function printResults(searchedBook) {
             library.push(data.items[clickIndex2].volumeInfo);
             localStorage.setItem("libraryBookInfo", JSON.stringify(library));
           } else {
-            //modal saying already saved to library
+            libraryButtons[clickIndex2].innerHTML = "Added to library";
+            libraryButtons[clickIndex2].setAttribute(
+                "class",
+                "ui  inverted grey button ui disabled button huge purchaseLinkButton"
+              );
           }
         });
       });

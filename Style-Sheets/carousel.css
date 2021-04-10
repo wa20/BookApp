@@ -61,7 +61,10 @@
 }
 
 .library-cover:hover, .wishlist-cover:hover, .swaplist-cover:hover {
-    transform: scale(1.2);
+    transform: scale(1.5);
+    cursor: pointer;
+    z-index: 2;
+    
 }
 
 .no-image {
